@@ -10,13 +10,13 @@ import Foundation
 import RealmSwift
 
 class UserModel: Object {
-    @objc dynamic var userID = UUID().uuidString
+    @objc dynamic var identifier = UUID().uuidString
     @objc dynamic var email:String = ""
     @objc dynamic var password = ""
     @objc dynamic var nameSurname = ""
 
     override static func primaryKey() -> String? {
-      return "userID"
+      return "identifier"
     }
 }
 

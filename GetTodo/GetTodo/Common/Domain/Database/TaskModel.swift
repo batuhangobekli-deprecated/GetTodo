@@ -10,14 +10,14 @@ import Foundation
 import RealmSwift
 
 class TaskModel: Object {
-    @objc dynamic var taskID = UUID().uuidString
+    @objc dynamic var identifier = UUID().uuidString
     @objc dynamic var taskDescription:String = ""
     @objc dynamic var date = Date(timeIntervalSince1970: 1)
     @objc dynamic var categoryId = ""
     @objc dynamic var userId = ""
 
     override static func primaryKey() -> String? {
-      return "taskID"
+      return "identifier"
     }
 }
 

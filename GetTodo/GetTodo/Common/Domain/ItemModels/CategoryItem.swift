@@ -9,21 +9,18 @@
 import Foundation
 
 struct CategoryItem {
-    
     var identifier = ""
-    
     var name = ""
-    
-    var password = ""
-    
-    var nameSurname = ""
-    
+    var imageString = ""
+    var hexColorString = ""
 }
 
 
 extension CategoryItem {
     init(with model: CategoryModel) {
-        identifier = model.categoryID
+        identifier = model.identifier
         name = model.name
+        imageString = model.imageString
+        hexColorString = model.hexColorString
      }
 }

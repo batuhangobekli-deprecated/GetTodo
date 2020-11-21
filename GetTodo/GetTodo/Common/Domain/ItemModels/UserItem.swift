@@ -23,7 +23,7 @@ struct UserItem {
 
 extension UserItem {
     init(with model: UserModel) {
-        identifier = model.userID
+        identifier = model.identifier
         email = model.email
         password = model.password
         nameSurname = model.nameSurname

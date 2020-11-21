@@ -10,7 +10,7 @@ import RealmSwift
 
 class RealmService {
 
-    static let version: UInt64 = 1
+    static let version: UInt64 = 3
 
     static func configure() {
         Realm.Configuration.defaultConfiguration = Realm.Configuration(schemaVersion: version, migrationBlock: migrate)

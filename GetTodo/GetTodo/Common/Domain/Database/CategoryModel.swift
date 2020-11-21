@@ -10,11 +10,13 @@ import Foundation
 import RealmSwift
 
 class CategoryModel: Object {
-    @objc dynamic var categoryID = ""
+    @objc dynamic var identifier = ""
     @objc dynamic var name = ""
+    @objc dynamic var imageString = ""
+    @objc dynamic var hexColorString = ""
     
     override static func primaryKey() -> String? {
-      return "categoryID"
+      return "identifier"
     }
 }
 

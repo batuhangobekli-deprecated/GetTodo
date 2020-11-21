@@ -14,6 +14,10 @@ class RealmObjectAdapter<T: Object> {
         return try? Realm().objects(T.self)
     }
     
+    func object(primaryKey:String) -> T? {
+        return try? Realm().object(ofType: T.self, forPrimaryKey: primaryKey)
+    }
+    
     @discardableResult func create(_ value: [String: Any]? = nil) throws -> T {
         let object = T()
         
