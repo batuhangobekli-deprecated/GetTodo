@@ -103,6 +103,7 @@
 				DFDD9F242569589E001DDDA0 /* Sources */,
 				DFDD9F252569589E001DDDA0 /* Frameworks */,
 				DFDD9F262569589E001DDDA0 /* Resources */,
+				403FA827533D8AA822340776 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -160,6 +161,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		403FA827533D8AA822340776 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GetTodo/Pods-GetTodo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GetTodo/Pods-GetTodo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GetTodo/Pods-GetTodo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FA46C2341F8BB4F1B086037E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
