@@ -27,7 +27,7 @@ class HomeViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
-        self.title = "GetTodo"
+        self.title = "Home"
         
         startObservingCategories()
         configureCollectionView()
@@ -51,6 +51,16 @@ extension HomeViewController {
         collectionView?.register(UINib.init(nibName: "CategoriesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CategoriesCollectionViewCell")
         collectionView.collectionViewLayout = columnLayout
     }
+    
+    func navigateToCategoryDetail(item:CategoryItem){
+        guard let navigationController =  self.navigationController else{
+            return
+        }
+        let storyBoard = UIStoryboard(name: "Category", bundle: nil)
+        let categoryDetailViewController = storyBoard.instantiateViewController(withIdentifier: "CategoryDetailViewController") as CategoryDetailViewController
+        categoryDetailViewController.selectedCategory = item
+        navigationController.pushViewController(categoryDetailViewController, animated: true)
+    }
 }
 
 extension HomeViewController:UICollectionViewDataSource,UICollectionViewDelegate{
@@ -66,7 +76,7 @@ extension HomeViewController:UICollectionViewDataSource,UICollectionViewDelegate
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        self.navigateToCategoryDetail(item: self.categoryList[indexPath.row])
     }
 }
 

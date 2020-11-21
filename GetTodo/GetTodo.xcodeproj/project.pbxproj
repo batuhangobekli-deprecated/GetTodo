@@ -33,6 +33,9 @@
 		DFDD9F892569902D001DDDA0 /* UINib.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD9F882569902D001DDDA0 /* UINib.swift */; };
 		DFDD9F8B25699D16001DDDA0 /* ColumnFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD9F8A25699D16001DDDA0 /* ColumnFlowLayout.swift */; };
 		DFDD9F8D2569A3A2001DDDA0 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD9F8C2569A3A2001DDDA0 /* UIColor.swift */; };
+		DFDD9F902569ADDA001DDDA0 /* CategoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD9F8F2569ADDA001DDDA0 /* CategoryDetailViewController.swift */; };
+		DFDD9F922569ADEA001DDDA0 /* Category.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFDD9F912569ADEA001DDDA0 /* Category.storyboard */; };
+		DFDD9F952569B070001DDDA0 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD9F942569B06F001DDDA0 /* UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +69,9 @@
 		DFDD9F882569902D001DDDA0 /* UINib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINib.swift; sourceTree = "<group>"; };
 		DFDD9F8A25699D16001DDDA0 /* ColumnFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnFlowLayout.swift; sourceTree = "<group>"; };
 		DFDD9F8C2569A3A2001DDDA0 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		DFDD9F8F2569ADDA001DDDA0 /* CategoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailViewController.swift; sourceTree = "<group>"; };
+		DFDD9F912569ADEA001DDDA0 /* Category.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Category.storyboard; sourceTree = "<group>"; };
+		DFDD9F942569B06F001DDDA0 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +147,7 @@
 		DFDD9F4025695FF4001DDDA0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DFDD9F8E2569ADBA001DDDA0 /* CategoryDetail */,
 				DFDD9F4225696024001DDDA0 /* AddTask */,
 				DFDD9F412569601E001DDDA0 /* Home */,
 			);
@@ -263,6 +270,7 @@
 				DFDD9F8625699012001DDDA0 /* UITableView.swift */,
 				DFDD9F882569902D001DDDA0 /* UINib.swift */,
 				DFDD9F8C2569A3A2001DDDA0 /* UIColor.swift */,
+				DFDD9F942569B06F001DDDA0 /* UIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -270,6 +278,7 @@
 		DFDD9F7225698B85001DDDA0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DFDD9F932569AE45001DDDA0 /* CategoryDetailCell */,
 				DFDD9F7325698B8C001DDDA0 /* CategoriesCell */,
 			);
 			path = Views;
@@ -282,6 +291,22 @@
 				DFDD9F7525698BC7001DDDA0 /* CategoriesCollectionViewCell.xib */,
 			);
 			path = CategoriesCell;
+			sourceTree = "<group>";
+		};
+		DFDD9F8E2569ADBA001DDDA0 /* CategoryDetail */ = {
+			isa = PBXGroup;
+			children = (
+				DFDD9F8F2569ADDA001DDDA0 /* CategoryDetailViewController.swift */,
+				DFDD9F912569ADEA001DDDA0 /* Category.storyboard */,
+			);
+			path = CategoryDetail;
+			sourceTree = "<group>";
+		};
+		DFDD9F932569AE45001DDDA0 /* CategoryDetailCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CategoryDetailCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,6 +369,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFDD9F922569ADEA001DDDA0 /* Category.storyboard in Resources */,
 				DFDD9F38256958A0001DDDA0 /* LaunchScreen.storyboard in Resources */,
 				DFDD9F7725698BC7001DDDA0 /* CategoriesCollectionViewCell.xib in Resources */,
 				DFDD9F462569605E001DDDA0 /* Home.storyboard in Resources */,
@@ -403,10 +429,12 @@
 			files = (
 				DFDD9F7925698DAC001DDDA0 /* UICollectionView.swift in Sources */,
 				DFDD9F302569589E001DDDA0 /* HomeViewController.swift in Sources */,
+				DFDD9F952569B070001DDDA0 /* UIView.swift in Sources */,
 				DFDD9F5125696552001DDDA0 /* CategoryModel.swift in Sources */,
 				DFDD9F562569656D001DDDA0 /* UserModel.swift in Sources */,
 				DFDD9F2C2569589E001DDDA0 /* AppDelegate.swift in Sources */,
 				DFDD9F6E25697187001DDDA0 /* CategoryNotifier.swift in Sources */,
+				DFDD9F902569ADDA001DDDA0 /* CategoryDetailViewController.swift in Sources */,
 				DFDD9F59256968F7001DDDA0 /* TaskItem.swift in Sources */,
 				DFDD9F5B2569691F001DDDA0 /* UserItem.swift in Sources */,
 				DFDD9F4C2569637D001DDDA0 /* RealmObjectAdapter.swift in Sources */,
