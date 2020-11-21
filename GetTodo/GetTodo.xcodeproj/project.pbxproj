@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E5F42B0BB87BD90BC2A4B46 /* Pods_GetTodo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 865AE7B2F71B138907346E91 /* Pods_GetTodo.framework */; };
 		DFDD9F2C2569589E001DDDA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD9F2B2569589E001DDDA0 /* AppDelegate.swift */; };
 		DFDD9F2E2569589E001DDDA0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD9F2D2569589E001DDDA0 /* SceneDelegate.swift */; };
 		DFDD9F302569589E001DDDA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD9F2F2569589E001DDDA0 /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		54E67E688D5176E9D4433A68 /* Pods-GetTodo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetTodo.debug.xcconfig"; path = "Target Support Files/Pods-GetTodo/Pods-GetTodo.debug.xcconfig"; sourceTree = "<group>"; };
+		865AE7B2F71B138907346E91 /* Pods_GetTodo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetTodo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF3A8CAF8FEE3C4645BF8476 /* Pods-GetTodo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetTodo.release.xcconfig"; path = "Target Support Files/Pods-GetTodo/Pods-GetTodo.release.xcconfig"; sourceTree = "<group>"; };
 		DFDD9F282569589E001DDDA0 /* GetTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFDD9F2B2569589E001DDDA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFDD9F2D2569589E001DDDA0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E5F42B0BB87BD90BC2A4B46 /* Pods_GetTodo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		58AE4603BDD9B9B21540C3F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				865AE7B2F71B138907346E91 /* Pods_GetTodo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AFE35DA6BF651C309DB28F0F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				54E67E688D5176E9D4433A68 /* Pods-GetTodo.debug.xcconfig */,
+				DF3A8CAF8FEE3C4645BF8476 /* Pods-GetTodo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		DFDD9F1F2569589E001DDDA0 = {
 			isa = PBXGroup;
 			children = (
 				DFDD9F2A2569589E001DDDA0 /* GetTodo */,
 				DFDD9F292569589E001DDDA0 /* Products */,
+				AFE35DA6BF651C309DB28F0F /* Pods */,
+				58AE4603BDD9B9B21540C3F0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +99,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DFDD9F3C256958A0001DDDA0 /* Build configuration list for PBXNativeTarget "GetTodo" */;
 			buildPhases = (
+				FA46C2341F8BB4F1B086037E /* [CP] Check Pods Manifest.lock */,
 				DFDD9F242569589E001DDDA0 /* Sources */,
 				DFDD9F252569589E001DDDA0 /* Frameworks */,
 				DFDD9F262569589E001DDDA0 /* Resources */,
@@ -132,6 +158,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FA46C2341F8BB4F1B086037E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GetTodo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DFDD9F242569589E001DDDA0 /* Sources */ = {
@@ -282,6 +333,7 @@
 		};
 		DFDD9F3D256958A0001DDDA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54E67E688D5176E9D4433A68 /* Pods-GetTodo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +352,7 @@
 		};
 		DFDD9F3E256958A0001DDDA0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF3A8CAF8FEE3C4645BF8476 /* Pods-GetTodo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
