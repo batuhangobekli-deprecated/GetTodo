@@ -10,10 +10,20 @@
 		3E5F42B0BB87BD90BC2A4B46 /* Pods_GetTodo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 865AE7B2F71B138907346E91 /* Pods_GetTodo.framework */; };
 		DFDD9F2C2569589E001DDDA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD9F2B2569589E001DDDA0 /* AppDelegate.swift */; };
 		DFDD9F2E2569589E001DDDA0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD9F2D2569589E001DDDA0 /* SceneDelegate.swift */; };
-		DFDD9F302569589E001DDDA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD9F2F2569589E001DDDA0 /* ViewController.swift */; };
-		DFDD9F332569589E001DDDA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFDD9F312569589E001DDDA0 /* Main.storyboard */; };
+		DFDD9F302569589E001DDDA0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD9F2F2569589E001DDDA0 /* HomeViewController.swift */; };
 		DFDD9F35256958A0001DDDA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFDD9F34256958A0001DDDA0 /* Assets.xcassets */; };
 		DFDD9F38256958A0001DDDA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFDD9F36256958A0001DDDA0 /* LaunchScreen.storyboard */; };
+		DFDD9F4425696043001DDDA0 /* AddTask.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFDD9F4325696043001DDDA0 /* AddTask.storyboard */; };
+		DFDD9F462569605E001DDDA0 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFDD9F452569605E001DDDA0 /* Home.storyboard */; };
+		DFDD9F4A256962DE001DDDA0 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD9F49256962DE001DDDA0 /* RealmService.swift */; };
+		DFDD9F4C2569637D001DDDA0 /* RealmObjectAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD9F4B2569637D001DDDA0 /* RealmObjectAdapter.swift */; };
+		DFDD9F5125696552001DDDA0 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD9F5025696552001DDDA0 /* CategoryModel.swift */; };
+		DFDD9F5425696563001DDDA0 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD9F5325696563001DDDA0 /* TaskModel.swift */; };
+		DFDD9F562569656D001DDDA0 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD9F552569656D001DDDA0 /* UserModel.swift */; };
+		DFDD9F59256968F7001DDDA0 /* TaskItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD9F58256968F7001DDDA0 /* TaskItem.swift */; };
+		DFDD9F5B2569691F001DDDA0 /* UserItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD9F5A2569691F001DDDA0 /* UserItem.swift */; };
+		DFDD9F5D25696A79001DDDA0 /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD9F5C25696A79001DDDA0 /* CategoryItem.swift */; };
+		DFDD9F6825696BA1001DDDA0 /* CategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD9F6725696BA1001DDDA0 /* CategoryService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,11 +33,21 @@
 		DFDD9F282569589E001DDDA0 /* GetTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFDD9F2B2569589E001DDDA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFDD9F2D2569589E001DDDA0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DFDD9F2F2569589E001DDDA0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DFDD9F322569589E001DDDA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DFDD9F2F2569589E001DDDA0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DFDD9F34256958A0001DDDA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFDD9F37256958A0001DDDA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DFDD9F39256958A0001DDDA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFDD9F4325696043001DDDA0 /* AddTask.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddTask.storyboard; sourceTree = "<group>"; };
+		DFDD9F452569605E001DDDA0 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		DFDD9F49256962DE001DDDA0 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		DFDD9F4B2569637D001DDDA0 /* RealmObjectAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmObjectAdapter.swift; sourceTree = "<group>"; };
+		DFDD9F5025696552001DDDA0 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		DFDD9F5325696563001DDDA0 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
+		DFDD9F552569656D001DDDA0 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		DFDD9F58256968F7001DDDA0 /* TaskItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskItem.swift; sourceTree = "<group>"; };
+		DFDD9F5A2569691F001DDDA0 /* UserItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserItem.swift; sourceTree = "<group>"; };
+		DFDD9F5C25696A79001DDDA0 /* CategoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItem.swift; sourceTree = "<group>"; };
+		DFDD9F6725696BA1001DDDA0 /* CategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,23 +100,105 @@
 		DFDD9F2A2569589E001DDDA0 /* GetTodo */ = {
 			isa = PBXGroup;
 			children = (
-				DFDD9F3F25695F78001DDDA0 /* New Group */,
+				DFDD9F472569611A001DDDA0 /* Common */,
+				DFDD9F4025695FF4001DDDA0 /* Controllers */,
+				DFDD9F3F25695F78001DDDA0 /* Resources */,
 				DFDD9F2B2569589E001DDDA0 /* AppDelegate.swift */,
 				DFDD9F2D2569589E001DDDA0 /* SceneDelegate.swift */,
-				DFDD9F2F2569589E001DDDA0 /* ViewController.swift */,
-				DFDD9F312569589E001DDDA0 /* Main.storyboard */,
-				DFDD9F34256958A0001DDDA0 /* Assets.xcassets */,
 				DFDD9F36256958A0001DDDA0 /* LaunchScreen.storyboard */,
 				DFDD9F39256958A0001DDDA0 /* Info.plist */,
 			);
 			path = GetTodo;
 			sourceTree = "<group>";
 		};
-		DFDD9F3F25695F78001DDDA0 /* New Group */ = {
+		DFDD9F3F25695F78001DDDA0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DFDD9F34256958A0001DDDA0 /* Assets.xcassets */,
 			);
-			path = "New Group";
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DFDD9F4025695FF4001DDDA0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DFDD9F4225696024001DDDA0 /* AddTask */,
+				DFDD9F412569601E001DDDA0 /* Home */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DFDD9F412569601E001DDDA0 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DFDD9F2F2569589E001DDDA0 /* HomeViewController.swift */,
+				DFDD9F452569605E001DDDA0 /* Home.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		DFDD9F4225696024001DDDA0 /* AddTask */ = {
+			isa = PBXGroup;
+			children = (
+				DFDD9F4325696043001DDDA0 /* AddTask.storyboard */,
+			);
+			path = AddTask;
+			sourceTree = "<group>";
+		};
+		DFDD9F472569611A001DDDA0 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				DFDD9F6625696B93001DDDA0 /* Services */,
+				DFDD9F4D256964E0001DDDA0 /* Domain */,
+				DFDD9F48256962BA001DDDA0 /* Realm */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		DFDD9F48256962BA001DDDA0 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				DFDD9F49256962DE001DDDA0 /* RealmService.swift */,
+				DFDD9F4B2569637D001DDDA0 /* RealmObjectAdapter.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		DFDD9F4D256964E0001DDDA0 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				DFDD9F57256968CB001DDDA0 /* ItemModels */,
+				DFDD9F4F25696527001DDDA0 /* Database */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		DFDD9F4F25696527001DDDA0 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				DFDD9F5025696552001DDDA0 /* CategoryModel.swift */,
+				DFDD9F5325696563001DDDA0 /* TaskModel.swift */,
+				DFDD9F552569656D001DDDA0 /* UserModel.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		DFDD9F57256968CB001DDDA0 /* ItemModels */ = {
+			isa = PBXGroup;
+			children = (
+				DFDD9F58256968F7001DDDA0 /* TaskItem.swift */,
+				DFDD9F5A2569691F001DDDA0 /* UserItem.swift */,
+				DFDD9F5C25696A79001DDDA0 /* CategoryItem.swift */,
+			);
+			path = ItemModels;
+			sourceTree = "<group>";
+		};
+		DFDD9F6625696B93001DDDA0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DFDD9F6725696BA1001DDDA0 /* CategoryService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,8 +262,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFDD9F38256958A0001DDDA0 /* LaunchScreen.storyboard in Resources */,
+				DFDD9F462569605E001DDDA0 /* Home.storyboard in Resources */,
+				DFDD9F4425696043001DDDA0 /* AddTask.storyboard in Resources */,
 				DFDD9F35256958A0001DDDA0 /* Assets.xcassets in Resources */,
-				DFDD9F332569589E001DDDA0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,23 +317,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFDD9F302569589E001DDDA0 /* ViewController.swift in Sources */,
+				DFDD9F302569589E001DDDA0 /* HomeViewController.swift in Sources */,
+				DFDD9F5125696552001DDDA0 /* CategoryModel.swift in Sources */,
+				DFDD9F562569656D001DDDA0 /* UserModel.swift in Sources */,
 				DFDD9F2C2569589E001DDDA0 /* AppDelegate.swift in Sources */,
+				DFDD9F59256968F7001DDDA0 /* TaskItem.swift in Sources */,
+				DFDD9F5B2569691F001DDDA0 /* UserItem.swift in Sources */,
+				DFDD9F4C2569637D001DDDA0 /* RealmObjectAdapter.swift in Sources */,
 				DFDD9F2E2569589E001DDDA0 /* SceneDelegate.swift in Sources */,
+				DFDD9F6825696BA1001DDDA0 /* CategoryService.swift in Sources */,
+				DFDD9F4A256962DE001DDDA0 /* RealmService.swift in Sources */,
+				DFDD9F5D25696A79001DDDA0 /* CategoryItem.swift in Sources */,
+				DFDD9F5425696563001DDDA0 /* TaskModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DFDD9F312569589E001DDDA0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DFDD9F322569589E001DDDA0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DFDD9F36256958A0001DDDA0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
