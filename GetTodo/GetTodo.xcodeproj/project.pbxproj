@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3E5F42B0BB87BD90BC2A4B46 /* Pods_GetTodo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 865AE7B2F71B138907346E91 /* Pods_GetTodo.framework */; };
 		DF5E0DA8256AF6010021A5AB /* CommonUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5E0DA7256AF6010021A5AB /* CommonUtility.swift */; };
+		DF5E0DB0256B0FB10021A5AB /* RoundRectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5E0DAF256B0FB10021A5AB /* RoundRectButton.swift */; };
+		DF5E0DB2256B12550021A5AB /* RoundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5E0DB1256B12550021A5AB /* RoundTextField.swift */; };
 		DF85AECF256A87AE00DE16F6 /* InputViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF85AECE256A87AE00DE16F6 /* InputViewButton.swift */; };
 		DF85AED1256A932300DE16F6 /* UserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF85AED0256A932300DE16F6 /* UserProvider.swift */; };
 		DF85AED3256A945200DE16F6 /* UserNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF85AED2256A945200DE16F6 /* UserNotifier.swift */; };
@@ -59,6 +61,8 @@
 		865AE7B2F71B138907346E91 /* Pods_GetTodo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetTodo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF3A8CAF8FEE3C4645BF8476 /* Pods-GetTodo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetTodo.release.xcconfig"; path = "Target Support Files/Pods-GetTodo/Pods-GetTodo.release.xcconfig"; sourceTree = "<group>"; };
 		DF5E0DA7256AF6010021A5AB /* CommonUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUtility.swift; sourceTree = "<group>"; };
+		DF5E0DAF256B0FB10021A5AB /* RoundRectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundRectButton.swift; sourceTree = "<group>"; };
+		DF5E0DB1256B12550021A5AB /* RoundTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTextField.swift; sourceTree = "<group>"; };
 		DF85AECE256A87AE00DE16F6 /* InputViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewButton.swift; sourceTree = "<group>"; };
 		DF85AED0256A932300DE16F6 /* UserProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProvider.swift; sourceTree = "<group>"; };
 		DF85AED2256A945200DE16F6 /* UserNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotifier.swift; sourceTree = "<group>"; };
@@ -138,6 +142,7 @@
 		DF5E0DA9256B08220021A5AB /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				DFDD9F912569ADEA001DDDA0 /* Category.storyboard */,
 				DFDD9F452569605E001DDDA0 /* Home.storyboard */,
 				DFDD9F4325696043001DDDA0 /* AddTask.storyboard */,
 				DF85AED5256A95B400DE16F6 /* Onboarding.storyboard */,
@@ -326,6 +331,8 @@
 			children = (
 				DFDD9F8A25699D16001DDDA0 /* ColumnFlowLayout.swift */,
 				DF85AECE256A87AE00DE16F6 /* InputViewButton.swift */,
+				DF5E0DAF256B0FB10021A5AB /* RoundRectButton.swift */,
+				DF5E0DB1256B12550021A5AB /* RoundTextField.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -367,7 +374,6 @@
 			isa = PBXGroup;
 			children = (
 				DFDD9F8F2569ADDA001DDDA0 /* CategoryDetailViewController.swift */,
-				DFDD9F912569ADEA001DDDA0 /* Category.storyboard */,
 			);
 			path = CategoryDetail;
 			sourceTree = "<group>";
@@ -533,9 +539,11 @@
 				DFDD9F2E2569589E001DDDA0 /* SceneDelegate.swift in Sources */,
 				DFDD9FA5256A6458001DDDA0 /* Date.swift in Sources */,
 				DFDD9F4A256962DE001DDDA0 /* RealmService.swift in Sources */,
+				DF5E0DB2256B12550021A5AB /* RoundTextField.swift in Sources */,
 				DFDD9F8B25699D16001DDDA0 /* ColumnFlowLayout.swift in Sources */,
 				DF85AEDC256A961E00DE16F6 /* GetStartedViewController.swift in Sources */,
 				DFDD9F5D25696A79001DDDA0 /* CategoryItem.swift in Sources */,
+				DF5E0DB0256B0FB10021A5AB /* RoundRectButton.swift in Sources */,
 				DFDD9F5425696563001DDDA0 /* TaskModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

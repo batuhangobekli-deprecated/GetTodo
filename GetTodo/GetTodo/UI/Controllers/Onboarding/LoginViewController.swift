@@ -9,12 +9,11 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-    @IBOutlet weak var emailAdressTextField: UITextField!
-    @IBOutlet weak var passwordTextfield: UITextField!
+    @IBOutlet weak var emailAdressTextField: RoundTextField!
+    @IBOutlet weak var passwordTextfield: RoundTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        styleUI()
         hideKeyboardWhenTappedAround()
     }
     
@@ -22,20 +21,12 @@ class LoginViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
-    func styleUI(){
-        passwordTextfield.borderStyle = .roundedRect
-        emailAdressTextField.borderStyle = .roundedRect
-        emailAdressTextField.backgroundColor = UIColor(hexString: "#F2F3F7")
-        passwordTextfield.backgroundColor = UIColor(hexString: "#F2F3F7")
-    }
     
     @IBAction func loginButtonDidTap(_ sender: Any) {
         let loginResultTuple = UserProvider.login(email: emailAdressTextField.text ?? "",password: passwordTextfield.text ?? "")
         
         if !loginResultTuple.isSuccess{
-            let alert = UIAlertController(title: "Error", message: "Please check your email and password", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+            CommonUtility.shared.prepareBasicAlert(message:"Please check your email and password" , title: "Error", buttonTitle: "OK", viewController: self)
         }else{
             TempDataHolder.shared.currentUserId = loginResultTuple.currentUserId
             CommonUtility.shared.navigateToHomePage(navigationController: self.navigationController)

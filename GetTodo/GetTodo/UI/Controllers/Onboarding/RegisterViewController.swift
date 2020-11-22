@@ -11,27 +11,17 @@ import UIKit
 import UIKit
 
 class RegisterViewController: UIViewController {
-    @IBOutlet weak var emailAdressTextField: UITextField!
-    @IBOutlet weak var passwordTextfield: UITextField!
-    @IBOutlet weak var fullNameTextField: UITextField!
+    @IBOutlet weak var emailAdressTextField: RoundTextField!
+    @IBOutlet weak var passwordTextfield: RoundTextField!
+    @IBOutlet weak var fullNameTextField: RoundTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        styleUI()
         hideKeyboardWhenTappedAround()
     }
     
     @IBAction func backButtonDidTap(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
-    }
-        
-    func styleUI(){
-        fullNameTextField.borderStyle = .roundedRect
-        passwordTextfield.borderStyle = .roundedRect
-        emailAdressTextField.borderStyle = .roundedRect
-        emailAdressTextField.backgroundColor = UIColor(hexString: "#F2F3F7")
-        passwordTextfield.backgroundColor = UIColor(hexString: "#F2F3F7")
-        fullNameTextField.backgroundColor = UIColor(hexString: "#F2F3F7")
     }
     
     @IBAction func registerButtonDidTap(_ sender: Any) {
