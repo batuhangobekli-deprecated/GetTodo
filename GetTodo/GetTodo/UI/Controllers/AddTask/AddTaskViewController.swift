@@ -17,7 +17,6 @@ class AddTaskViewController: UIViewController {
     var editingTask:TaskItem?
     var isEditingTask = false
     let datePicker = UIDatePicker()
-    lazy var pickerView = UIPickerView()
     
     override func viewDidLoad() {
         super.viewDidLoad()

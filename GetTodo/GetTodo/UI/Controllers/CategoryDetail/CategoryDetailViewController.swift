@@ -82,7 +82,6 @@ extension CategoryDetailViewController{
         }
     }
     
-    
     func presentAddEditViewController(taskToEdit:TaskItem?,isEdit:Bool){
         guard let category = selectedCategory else { return }
         
