@@ -16,7 +16,7 @@
 		DF85AED8256A95D000DE16F6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF85AED7256A95D000DE16F6 /* LoginViewController.swift */; };
 		DF85AEDA256A960B00DE16F6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF85AED9256A960B00DE16F6 /* RegisterViewController.swift */; };
 		DF85AEDC256A961E00DE16F6 /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF85AEDB256A961E00DE16F6 /* GetStartedViewController.swift */; };
-		DF85AEDF256ACB9200DE16F6 /* Dataholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF85AEDE256ACB9200DE16F6 /* Dataholder.swift */; };
+		DF85AEDF256ACB9200DE16F6 /* TempDataHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF85AEDE256ACB9200DE16F6 /* TempDataHolder.swift */; };
 		DFDD9F2C2569589E001DDDA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD9F2B2569589E001DDDA0 /* AppDelegate.swift */; };
 		DFDD9F2E2569589E001DDDA0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD9F2D2569589E001DDDA0 /* SceneDelegate.swift */; };
 		DFDD9F302569589E001DDDA0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD9F2F2569589E001DDDA0 /* HomeViewController.swift */; };
@@ -66,7 +66,7 @@
 		DF85AED7256A95D000DE16F6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DF85AED9256A960B00DE16F6 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		DF85AEDB256A961E00DE16F6 /* GetStartedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedViewController.swift; sourceTree = "<group>"; };
-		DF85AEDE256ACB9200DE16F6 /* Dataholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dataholder.swift; sourceTree = "<group>"; };
+		DF85AEDE256ACB9200DE16F6 /* TempDataHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempDataHolder.swift; sourceTree = "<group>"; };
 		DFDD9F282569589E001DDDA0 /* GetTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFDD9F2B2569589E001DDDA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFDD9F2D2569589E001DDDA0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -203,14 +203,6 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
-		DF85AEDD256ACB8100DE16F6 /* TempDataHolder */ = {
-			isa = PBXGroup;
-			children = (
-				DF85AEDE256ACB9200DE16F6 /* Dataholder.swift */,
-			);
-			path = TempDataHolder;
-			sourceTree = "<group>";
-		};
 		DFDD9F1F2569589E001DDDA0 = {
 			isa = PBXGroup;
 			children = (
@@ -236,7 +228,7 @@
 				DF5E0DAB256B08910021A5AB /* Models */,
 				DF5E0DAD256B0A370021A5AB /* UI */,
 				DF5E0DAA256B08750021A5AB /* Dataholder */,
-				DFDD9F472569611A001DDDA0 /* Common */,
+				DFDD9F472569611A001DDDA0 /* Helpers */,
 				DFDD9F3F25695F78001DDDA0 /* Resources */,
 				DFDD9F39256958A0001DDDA0 /* Info.plist */,
 			);
@@ -278,13 +270,15 @@
 			path = AddTask;
 			sourceTree = "<group>";
 		};
-		DFDD9F472569611A001DDDA0 /* Common */ = {
+		DFDD9F472569611A001DDDA0 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				DFDD9F6F25698144001DDDA0 /* Utils */,
-				DF85AEDD256ACB8100DE16F6 /* TempDataHolder */,
+				DFDD9F7125698184001DDDA0 /* Extensions */,
+				DFDD9F702569817D001DDDA0 /* CustomViews */,
+				DF85AEDE256ACB9200DE16F6 /* TempDataHolder.swift */,
+				DF5E0DA7256AF6010021A5AB /* CommonUtility.swift */,
 			);
-			path = Common;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		DFDD9F4F25696527001DDDA0 /* Database */ = {
@@ -327,15 +321,6 @@
 			path = Notifiers;
 			sourceTree = "<group>";
 		};
-		DFDD9F6F25698144001DDDA0 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				DFDD9F7125698184001DDDA0 /* Extensions */,
-				DFDD9F702569817D001DDDA0 /* CustomViews */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
 		DFDD9F702569817D001DDDA0 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,7 +341,6 @@
 				DFDD9F942569B06F001DDDA0 /* UIView.swift */,
 				DFDD9F9C256A54EE001DDDA0 /* UIViewController.swift */,
 				DFDD9FA4256A6458001DDDA0 /* Date.swift */,
-				DF5E0DA7256AF6010021A5AB /* CommonUtility.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -531,7 +515,7 @@
 				DF85AECF256A87AE00DE16F6 /* InputViewButton.swift in Sources */,
 				DF85AEDA256A960B00DE16F6 /* RegisterViewController.swift in Sources */,
 				DF85AED8256A95D000DE16F6 /* LoginViewController.swift in Sources */,
-				DF85AEDF256ACB9200DE16F6 /* Dataholder.swift in Sources */,
+				DF85AEDF256ACB9200DE16F6 /* TempDataHolder.swift in Sources */,
 				DFDD9F5B2569691F001DDDA0 /* UserItem.swift in Sources */,
 				DFDD9FA2256A5A6D001DDDA0 /* TaskTableViewCell.swift in Sources */,
 				DFDD9F4C2569637D001DDDA0 /* RealmObjectAdapter.swift in Sources */,
