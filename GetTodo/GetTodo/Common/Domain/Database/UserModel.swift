@@ -12,7 +12,7 @@ import RealmSwift
 class UserModel: Object {
     @objc dynamic var identifier = UUID().uuidString
     @objc dynamic var email:String = ""
-    @objc dynamic var password = ""
+    @objc dynamic var password:String = ""
     @objc dynamic var nameSurname = ""
 
     override static func primaryKey() -> String? {

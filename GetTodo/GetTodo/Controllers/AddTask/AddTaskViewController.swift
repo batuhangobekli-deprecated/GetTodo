@@ -86,7 +86,6 @@ extension AddTaskViewController{
         taskDateButton.inputAccessoryView = toolbar
         // add datepicker to textField
         taskDateButton.inputView = datePicker
-        
     }
     
     @objc func donedatePicker(){
@@ -100,11 +99,8 @@ extension AddTaskViewController{
     }
     
     func createTask(){
-        var newTask = TaskProvider.create()
-        newTask.categoryId = categoryId
-        newTask.date = datePicker.date
-        newTask.taskDescription = self.taskDescriptionTextView.text
-        TaskProvider.update(task: newTask)
+        let newTask = TaskItem(taskDescription: self.taskDescriptionTextView.text, date: datePicker.date, categoryId:  categoryId)
+        TaskProvider.create(task:newTask)
     }
     
     func editTask(){

@@ -16,23 +16,33 @@ class TaskProvider {
     static let shared = TaskProvider()
     
     static func tasks() -> [TaskItem] {
-        return adapter.objects()?.map({$0.toItem}) ?? []
+        return adapter.objects()?
+            .filter("userId == %@", Dataholder.shared.currentUserId)
+            .map({$0.toItem}) ?? []
     }
     
-    static func task(for identifier: String) -> TaskItem? {
-        return taskModel(for: identifier)?.toItem
-    }
     
     static func tasks(categoryId:String) -> [TaskItem] {
-        return adapter.objects(TaskModel.self)?.filter("categoryId == %@", categoryId).map({$0.toItem}) ?? []
+        return adapter.objects(TaskModel.self)?
+            .filter("categoryId == %@", categoryId)
+            .filter("userId == %@", Dataholder.shared.currentUserId)
+            .map({$0.toItem}) ?? []
     }
     
-    @discardableResult static func create() -> TaskItem {
-        guard let model = try? adapter.create() else {
-            fatalError("RealmObjectAdapter failed to create Object. Please check Realm configuration.")
-        }
-        return model.toItem
-    }
+//    @discardableResult static func create() -> TaskItem {
+//        guard let model = try? adapter.create() else {
+//            fatalError("RealmObjectAdapter failed to create Object. Please check Realm configuration.")
+//        }
+//        return model.toItem
+//    }
+    
+
+     static func create(task:TaskItem){
+        guard let model = try? adapter.create(["taskDescription":task.taskDescription,"date":task.date,"categoryId":task.categoryId,"userId":Dataholder.shared.currentUserId]) else {
+               fatalError("RealmObjectAdapter failed to create Object. Please check Realm configuration.")
+           }
+       }
+    
     
     static func update(task: TaskItem) {
         guard let model = taskModel(for: task.identifier) else { return }

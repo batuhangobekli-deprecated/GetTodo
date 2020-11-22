@@ -99,49 +99,49 @@ extension CategoryProvider {
         travelCategory.identifier = "1"
         travelCategory.imageString = "airplane"
         travelCategory.name = "Travel"
-        travelCategory.hexColorString = "#f38181"
+        travelCategory.hexColorString = "#f6e58d"
         CategoryProvider.create(with: travelCategory)
 
         var workCategory = CategoryItem()
         workCategory.identifier = "2"
         workCategory.imageString = "briefcase.fill"
         workCategory.name = "Work"
-        workCategory.hexColorString = "#eaffd0"
+        workCategory.hexColorString = "#ffbe76"
         CategoryProvider.create(with: workCategory)
 
         var musicCategory = CategoryItem()
         musicCategory.identifier = "3"
         musicCategory.imageString = "music.note.list"
         musicCategory.name = "Music"
-        musicCategory.hexColorString = "#b83b5e"
+        musicCategory.hexColorString = "#ff7979"
         CategoryProvider.create(with: musicCategory)
 
         var homeCategory = CategoryItem()
         homeCategory.identifier = "4"
         homeCategory.imageString = "house.fill"
         homeCategory.name = "Home"
-        homeCategory.hexColorString = "#6a2c70"
+        homeCategory.hexColorString = "#badc58"
         CategoryProvider.create(with: homeCategory)
 
         var studyCategory = CategoryItem()
         studyCategory.identifier = "5"
         studyCategory.imageString = "pencil"
         studyCategory.name = "Study"
-        studyCategory.hexColorString = "#f08a5d"
+        studyCategory.hexColorString = "#dff9fb"
         CategoryProvider.create(with: studyCategory)
 
         var shopCategory = CategoryItem()
         shopCategory.identifier = "6"
         shopCategory.imageString = "cart.fill.badge.plus"
         shopCategory.name = "Shoppping"
-        shopCategory.hexColorString = "#f9ed69"
+        shopCategory.hexColorString = "#7ed6df"
         CategoryProvider.create(with: shopCategory)
         
         var artCategory = CategoryItem()
         artCategory.identifier = "7"
         artCategory.imageString = "paintbrush.fill"
         artCategory.name = "Art"
-        artCategory.hexColorString = "#ffa62b"
+        artCategory.hexColorString = "#e056fd"
         CategoryProvider.create(with: artCategory)
     }
 }

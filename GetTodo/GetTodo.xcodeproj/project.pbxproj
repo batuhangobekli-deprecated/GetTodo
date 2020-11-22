@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		3E5F42B0BB87BD90BC2A4B46 /* Pods_GetTodo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 865AE7B2F71B138907346E91 /* Pods_GetTodo.framework */; };
 		DF85AECF256A87AE00DE16F6 /* InputViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF85AECE256A87AE00DE16F6 /* InputViewButton.swift */; };
+		DF85AED1256A932300DE16F6 /* UserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF85AED0256A932300DE16F6 /* UserProvider.swift */; };
+		DF85AED3256A945200DE16F6 /* UserNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF85AED2256A945200DE16F6 /* UserNotifier.swift */; };
+		DF85AED6256A95B400DE16F6 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF85AED5256A95B400DE16F6 /* Onboarding.storyboard */; };
+		DF85AED8256A95D000DE16F6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF85AED7256A95D000DE16F6 /* LoginViewController.swift */; };
+		DF85AEDA256A960B00DE16F6 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF85AED9256A960B00DE16F6 /* RegisterViewController.swift */; };
+		DF85AEDC256A961E00DE16F6 /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF85AEDB256A961E00DE16F6 /* GetStartedViewController.swift */; };
+		DF85AEDF256ACB9200DE16F6 /* Dataholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF85AEDE256ACB9200DE16F6 /* Dataholder.swift */; };
 		DFDD9F2C2569589E001DDDA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD9F2B2569589E001DDDA0 /* AppDelegate.swift */; };
 		DFDD9F2E2569589E001DDDA0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD9F2D2569589E001DDDA0 /* SceneDelegate.swift */; };
 		DFDD9F302569589E001DDDA0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD9F2F2569589E001DDDA0 /* HomeViewController.swift */; };
@@ -51,6 +58,13 @@
 		865AE7B2F71B138907346E91 /* Pods_GetTodo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetTodo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF3A8CAF8FEE3C4645BF8476 /* Pods-GetTodo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetTodo.release.xcconfig"; path = "Target Support Files/Pods-GetTodo/Pods-GetTodo.release.xcconfig"; sourceTree = "<group>"; };
 		DF85AECE256A87AE00DE16F6 /* InputViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewButton.swift; sourceTree = "<group>"; };
+		DF85AED0256A932300DE16F6 /* UserProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProvider.swift; sourceTree = "<group>"; };
+		DF85AED2256A945200DE16F6 /* UserNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotifier.swift; sourceTree = "<group>"; };
+		DF85AED5256A95B400DE16F6 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		DF85AED7256A95D000DE16F6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DF85AED9256A960B00DE16F6 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		DF85AEDB256A961E00DE16F6 /* GetStartedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedViewController.swift; sourceTree = "<group>"; };
+		DF85AEDE256ACB9200DE16F6 /* Dataholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dataholder.swift; sourceTree = "<group>"; };
 		DFDD9F282569589E001DDDA0 /* GetTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFDD9F2B2569589E001DDDA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFDD9F2D2569589E001DDDA0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +133,25 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		DF85AED4256A959500DE16F6 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				DF85AED5256A95B400DE16F6 /* Onboarding.storyboard */,
+				DF85AED7256A95D000DE16F6 /* LoginViewController.swift */,
+				DF85AED9256A960B00DE16F6 /* RegisterViewController.swift */,
+				DF85AEDB256A961E00DE16F6 /* GetStartedViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		DF85AEDD256ACB8100DE16F6 /* Dataholder */ = {
+			isa = PBXGroup;
+			children = (
+				DF85AEDE256ACB9200DE16F6 /* Dataholder.swift */,
+			);
+			path = Dataholder;
+			sourceTree = "<group>";
+		};
 		DFDD9F1F2569589E001DDDA0 = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +196,7 @@
 		DFDD9F4025695FF4001DDDA0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DF85AED4256A959500DE16F6 /* Onboarding */,
 				DFDD9F8E2569ADBA001DDDA0 /* CategoryDetail */,
 				DFDD9F4225696024001DDDA0 /* AddTask */,
 				DFDD9F412569601E001DDDA0 /* Home */,
@@ -191,6 +225,7 @@
 		DFDD9F472569611A001DDDA0 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				DF85AEDD256ACB8100DE16F6 /* Dataholder */,
 				DFDD9F7225698B85001DDDA0 /* Views */,
 				DFDD9F6C25697176001DDDA0 /* Notifiers */,
 				DFDD9F6925696DD1001DDDA0 /* Providers */,
@@ -243,6 +278,7 @@
 			children = (
 				DFDD9F6A25696DE5001DDDA0 /* CategoryProvider.swift */,
 				DFDD9F96256A44D1001DDDA0 /* TaskProvider.swift */,
+				DF85AED0256A932300DE16F6 /* UserProvider.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -252,6 +288,7 @@
 			children = (
 				DFDD9F6D25697187001DDDA0 /* CategoryNotifier.swift */,
 				DFDD9F98256A44E0001DDDA0 /* TaskNotifier.swift */,
+				DF85AED2256A945200DE16F6 /* UserNotifier.swift */,
 			);
 			path = Notifiers;
 			sourceTree = "<group>";
@@ -392,6 +429,7 @@
 				DFDD9F4425696043001DDDA0 /* AddTask.storyboard in Resources */,
 				DFDD9F35256958A0001DDDA0 /* Assets.xcassets in Resources */,
 				DFDD9FA3256A5A6D001DDDA0 /* TaskTableViewCell.xib in Resources */,
+				DF85AED6256A95B400DE16F6 /* Onboarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +485,7 @@
 				DFDD9F7925698DAC001DDDA0 /* UICollectionView.swift in Sources */,
 				DFDD9F302569589E001DDDA0 /* HomeViewController.swift in Sources */,
 				DFDD9F952569B070001DDDA0 /* UIView.swift in Sources */,
+				DF85AED3256A945200DE16F6 /* UserNotifier.swift in Sources */,
 				DFDD9F5125696552001DDDA0 /* CategoryModel.swift in Sources */,
 				DFDD9F9B256A46BA001DDDA0 /* AddTaskViewController.swift in Sources */,
 				DFDD9F562569656D001DDDA0 /* UserModel.swift in Sources */,
@@ -455,6 +494,9 @@
 				DFDD9F902569ADDA001DDDA0 /* CategoryDetailViewController.swift in Sources */,
 				DFDD9F59256968F7001DDDA0 /* TaskItem.swift in Sources */,
 				DF85AECF256A87AE00DE16F6 /* InputViewButton.swift in Sources */,
+				DF85AEDA256A960B00DE16F6 /* RegisterViewController.swift in Sources */,
+				DF85AED8256A95D000DE16F6 /* LoginViewController.swift in Sources */,
+				DF85AEDF256ACB9200DE16F6 /* Dataholder.swift in Sources */,
 				DFDD9F5B2569691F001DDDA0 /* UserItem.swift in Sources */,
 				DFDD9FA2256A5A6D001DDDA0 /* TaskTableViewCell.swift in Sources */,
 				DFDD9F4C2569637D001DDDA0 /* RealmObjectAdapter.swift in Sources */,
@@ -463,6 +505,7 @@
 				DFDD9F97256A44D1001DDDA0 /* TaskProvider.swift in Sources */,
 				DFDD9F7625698BC7001DDDA0 /* CategoriesCollectionViewCell.swift in Sources */,
 				DFDD9F892569902D001DDDA0 /* UINib.swift in Sources */,
+				DF85AED1256A932300DE16F6 /* UserProvider.swift in Sources */,
 				DFDD9F99256A44E0001DDDA0 /* TaskNotifier.swift in Sources */,
 				DFDD9F8725699012001DDDA0 /* UITableView.swift in Sources */,
 				DFDD9F6B25696DE5001DDDA0 /* CategoryProvider.swift in Sources */,
@@ -471,6 +514,7 @@
 				DFDD9FA5256A6458001DDDA0 /* Date.swift in Sources */,
 				DFDD9F4A256962DE001DDDA0 /* RealmService.swift in Sources */,
 				DFDD9F8B25699D16001DDDA0 /* ColumnFlowLayout.swift in Sources */,
+				DF85AEDC256A961E00DE16F6 /* GetStartedViewController.swift in Sources */,
 				DFDD9F5D25696A79001DDDA0 /* CategoryItem.swift in Sources */,
 				DFDD9F5425696563001DDDA0 /* TaskModel.swift in Sources */,
 			);
