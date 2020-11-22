@@ -17,7 +17,7 @@ class TaskProvider {
     
     static func tasks() -> [TaskItem] {
         return adapter.objects()?
-            .filter("userId == %@", Dataholder.shared.currentUserId)
+            .filter("userId == %@", TempDataHolder.shared.currentUserId)
             .map({$0.toItem}) ?? []
     }
     
@@ -25,12 +25,12 @@ class TaskProvider {
     static func tasks(categoryId:String) -> [TaskItem] {
         return adapter.objects(TaskModel.self)?
             .filter("categoryId == %@", categoryId)
-            .filter("userId == %@", Dataholder.shared.currentUserId)
+            .filter("userId == %@", TempDataHolder.shared.currentUserId)
             .map({$0.toItem}) ?? []
     }
     
     static func create(task:TaskItem){
-        guard (try? adapter.create(["taskDescription":task.taskDescription,"date":task.date,"categoryId":task.categoryId,"userId":Dataholder.shared.currentUserId])) != nil else
+        guard (try? adapter.create(["taskDescription":task.taskDescription,"date":task.date,"categoryId":task.categoryId,"userId":TempDataHolder.shared.currentUserId])) != nil else
         {
                 fatalError("RealmObjectAdapter failed to create Object. Please check Realm configuration.")
         }

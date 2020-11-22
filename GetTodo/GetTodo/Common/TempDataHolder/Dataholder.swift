@@ -8,8 +8,8 @@
 
 import Foundation
 
-class Dataholder {
-    public static let shared = Dataholder()
+class TempDataHolder {
+    public static let shared = TempDataHolder()
     
     var currentUserId:String = ""
 }

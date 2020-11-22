@@ -135,10 +135,67 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		DF5E0DA9256B08220021A5AB /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				DFDD9F452569605E001DDDA0 /* Home.storyboard */,
+				DFDD9F4325696043001DDDA0 /* AddTask.storyboard */,
+				DF85AED5256A95B400DE16F6 /* Onboarding.storyboard */,
+				DFDD9F36256958A0001DDDA0 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		DF5E0DAA256B08750021A5AB /* Dataholder */ = {
+			isa = PBXGroup;
+			children = (
+				DF5E0DAE256B0A9B0021A5AB /* Realm */,
+				DFDD9F6C25697176001DDDA0 /* Notifiers */,
+				DFDD9F6925696DD1001DDDA0 /* Providers */,
+			);
+			path = Dataholder;
+			sourceTree = "<group>";
+		};
+		DF5E0DAB256B08910021A5AB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DFDD9F4F25696527001DDDA0 /* Database */,
+				DFDD9F57256968CB001DDDA0 /* ItemModels */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DF5E0DAC256B0A190021A5AB /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				DFDD9F2B2569589E001DDDA0 /* AppDelegate.swift */,
+				DFDD9F2D2569589E001DDDA0 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		DF5E0DAD256B0A370021A5AB /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				DFDD9F7225698B85001DDDA0 /* Views */,
+				DFDD9F4025695FF4001DDDA0 /* Controllers */,
+				DF5E0DA9256B08220021A5AB /* Storyboards */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		DF5E0DAE256B0A9B0021A5AB /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				DFDD9F49256962DE001DDDA0 /* RealmService.swift */,
+				DFDD9F4B2569637D001DDDA0 /* RealmObjectAdapter.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
 		DF85AED4256A959500DE16F6 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				DF85AED5256A95B400DE16F6 /* Onboarding.storyboard */,
 				DF85AED7256A95D000DE16F6 /* LoginViewController.swift */,
 				DF85AED9256A960B00DE16F6 /* RegisterViewController.swift */,
 				DF85AEDB256A961E00DE16F6 /* GetStartedViewController.swift */,
@@ -146,12 +203,12 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
-		DF85AEDD256ACB8100DE16F6 /* Dataholder */ = {
+		DF85AEDD256ACB8100DE16F6 /* TempDataHolder */ = {
 			isa = PBXGroup;
 			children = (
 				DF85AEDE256ACB9200DE16F6 /* Dataholder.swift */,
 			);
-			path = Dataholder;
+			path = TempDataHolder;
 			sourceTree = "<group>";
 		};
 		DFDD9F1F2569589E001DDDA0 = {
@@ -175,13 +232,12 @@
 		DFDD9F2A2569589E001DDDA0 /* GetTodo */ = {
 			isa = PBXGroup;
 			children = (
-				DFDD9F6F25698144001DDDA0 /* Utils */,
+				DF5E0DAC256B0A190021A5AB /* Application */,
+				DF5E0DAB256B08910021A5AB /* Models */,
+				DF5E0DAD256B0A370021A5AB /* UI */,
+				DF5E0DAA256B08750021A5AB /* Dataholder */,
 				DFDD9F472569611A001DDDA0 /* Common */,
-				DFDD9F4025695FF4001DDDA0 /* Controllers */,
 				DFDD9F3F25695F78001DDDA0 /* Resources */,
-				DFDD9F2B2569589E001DDDA0 /* AppDelegate.swift */,
-				DFDD9F2D2569589E001DDDA0 /* SceneDelegate.swift */,
-				DFDD9F36256958A0001DDDA0 /* LaunchScreen.storyboard */,
 				DFDD9F39256958A0001DDDA0 /* Info.plist */,
 			);
 			path = GetTodo;
@@ -210,7 +266,6 @@
 			isa = PBXGroup;
 			children = (
 				DFDD9F2F2569589E001DDDA0 /* HomeViewController.swift */,
-				DFDD9F452569605E001DDDA0 /* Home.storyboard */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -218,7 +273,6 @@
 		DFDD9F4225696024001DDDA0 /* AddTask */ = {
 			isa = PBXGroup;
 			children = (
-				DFDD9F4325696043001DDDA0 /* AddTask.storyboard */,
 				DFDD9F9A256A46BA001DDDA0 /* AddTaskViewController.swift */,
 			);
 			path = AddTask;
@@ -227,32 +281,10 @@
 		DFDD9F472569611A001DDDA0 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				DF85AEDD256ACB8100DE16F6 /* Dataholder */,
-				DFDD9F7225698B85001DDDA0 /* Views */,
-				DFDD9F6C25697176001DDDA0 /* Notifiers */,
-				DFDD9F6925696DD1001DDDA0 /* Providers */,
-				DFDD9F4D256964E0001DDDA0 /* Domain */,
-				DFDD9F48256962BA001DDDA0 /* Realm */,
+				DFDD9F6F25698144001DDDA0 /* Utils */,
+				DF85AEDD256ACB8100DE16F6 /* TempDataHolder */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		DFDD9F48256962BA001DDDA0 /* Realm */ = {
-			isa = PBXGroup;
-			children = (
-				DFDD9F49256962DE001DDDA0 /* RealmService.swift */,
-				DFDD9F4B2569637D001DDDA0 /* RealmObjectAdapter.swift */,
-			);
-			path = Realm;
-			sourceTree = "<group>";
-		};
-		DFDD9F4D256964E0001DDDA0 /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				DFDD9F57256968CB001DDDA0 /* ItemModels */,
-				DFDD9F4F25696527001DDDA0 /* Database */,
-			);
-			path = Domain;
 			sourceTree = "<group>";
 		};
 		DFDD9F4F25696527001DDDA0 /* Database */ = {
