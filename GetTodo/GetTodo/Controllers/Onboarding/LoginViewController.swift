@@ -38,16 +38,8 @@ class LoginViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
         }else{
             Dataholder.shared.currentUserId = loginResultTuple.currentUserId
-            self.navigateToHomePage()
+            CommonUtility.shared.navigateToHomePage(navigationController: self.navigationController)
         }
     }
 }
 
-extension LoginViewController {
-    func navigateToHomePage(){
-        let story = UIStoryboard(name: "Home", bundle:nil)
-        let homeViewController = story.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
-        self.navigationController?.setViewControllers([homeViewController], animated: true)
-    }
-}

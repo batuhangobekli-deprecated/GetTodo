@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sSX-yJ-9aF">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9dI-tI-Qm3">
                                     <size key="itemSize" width="128" height="128"/>
@@ -39,8 +39,8 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="sSX-yJ-9aF" secondAttribute="bottom" id="7el-Ui-mEE"/>
                             <constraint firstItem="sSX-yJ-9aF" firstAttribute="top" secondItem="ryi-jZ-GaB" secondAttribute="top" id="N0Y-6m-G3i"/>
-                            <constraint firstItem="ryi-jZ-GaB" firstAttribute="bottom" secondItem="sSX-yJ-9aF" secondAttribute="bottom" id="TyF-zd-1MJ"/>
                             <constraint firstItem="ryi-jZ-GaB" firstAttribute="trailing" secondItem="sSX-yJ-9aF" secondAttribute="trailing" id="cep-FE-y9J"/>
                             <constraint firstItem="sSX-yJ-9aF" firstAttribute="leading" secondItem="ryi-jZ-GaB" secondAttribute="leading" id="w3F-nw-ZqQ"/>
                         </constraints>
@@ -53,7 +53,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cB2-NV-ULg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1084.0579710144928" y="75"/>
+            <point key="canvasLocation" x="1082.608695652174" y="75"/>
         </scene>
     </scenes>
 </document>

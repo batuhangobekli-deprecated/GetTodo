@@ -14,9 +14,8 @@ class HomeViewController: UIViewController{
         cellsPerRow: 2,
         minimumInteritemSpacing: 10,
         minimumLineSpacing: 10,
-        sectionInset: UIEdgeInsets(top: 10, left: 10, bottom: 10 ,right: 10)
+        sectionInset: UIEdgeInsets(top: 15, left: 15, bottom: 15 ,right: 15)
     )
-    
     var categoryList : [CategoryItem] = []{
         didSet{
             self.collectionView.reloadData()
@@ -28,7 +27,7 @@ class HomeViewController: UIViewController{
         super.viewDidLoad()
         navigationController?.navigationBar.prefersLargeTitles = true
         self.title = "Home"
-        
+        startObservingTasks()
         startObservingCategories()
         configureCollectionView()
         getUsersCategories()
@@ -71,6 +70,7 @@ extension HomeViewController:UICollectionViewDataSource,UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: CategoriesCollectionViewCell = collectionView.dequeueReusableCell(at: indexPath)
         let item = categoryList[indexPath.row]
+        cell.shadowDecorate()
         let totalTaskCount = CategoryProvider.getCategoryTaskCount(categoryId: item.identifier)
         cell.configure(item: item,totalTask: totalTaskCount)
         return cell
@@ -84,5 +84,11 @@ extension HomeViewController:UICollectionViewDataSource,UICollectionViewDelegate
 extension HomeViewController:CategoryObserver{
     func onDidChange(categories: [CategoryItem]) {
         self.categoryList = categories
+    }
+}
+
+extension HomeViewController:TaskObserver{
+    func onDidChange(tasks: [TaskItem]) {
+        self.collectionView.reloadData()
     }
 }

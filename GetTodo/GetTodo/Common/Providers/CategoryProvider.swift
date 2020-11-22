@@ -94,7 +94,7 @@ extension CategoryProvider {
 }
 
 extension CategoryProvider {
-    func createUserCategories() {
+    func createUserDummyCategories() {
         var travelCategory = CategoryItem()
         travelCategory.identifier = "1"
         travelCategory.imageString = "airplane"

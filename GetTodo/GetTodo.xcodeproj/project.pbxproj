@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3E5F42B0BB87BD90BC2A4B46 /* Pods_GetTodo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 865AE7B2F71B138907346E91 /* Pods_GetTodo.framework */; };
+		DF5E0DA8256AF6010021A5AB /* CommonUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5E0DA7256AF6010021A5AB /* CommonUtility.swift */; };
 		DF85AECF256A87AE00DE16F6 /* InputViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF85AECE256A87AE00DE16F6 /* InputViewButton.swift */; };
 		DF85AED1256A932300DE16F6 /* UserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF85AED0256A932300DE16F6 /* UserProvider.swift */; };
 		DF85AED3256A945200DE16F6 /* UserNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF85AED2256A945200DE16F6 /* UserNotifier.swift */; };
@@ -57,6 +58,7 @@
 		54E67E688D5176E9D4433A68 /* Pods-GetTodo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetTodo.debug.xcconfig"; path = "Target Support Files/Pods-GetTodo/Pods-GetTodo.debug.xcconfig"; sourceTree = "<group>"; };
 		865AE7B2F71B138907346E91 /* Pods_GetTodo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetTodo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF3A8CAF8FEE3C4645BF8476 /* Pods-GetTodo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetTodo.release.xcconfig"; path = "Target Support Files/Pods-GetTodo/Pods-GetTodo.release.xcconfig"; sourceTree = "<group>"; };
+		DF5E0DA7256AF6010021A5AB /* CommonUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUtility.swift; sourceTree = "<group>"; };
 		DF85AECE256A87AE00DE16F6 /* InputViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewButton.swift; sourceTree = "<group>"; };
 		DF85AED0256A932300DE16F6 /* UserProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProvider.swift; sourceTree = "<group>"; };
 		DF85AED2256A945200DE16F6 /* UserNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotifier.swift; sourceTree = "<group>"; };
@@ -322,6 +324,7 @@
 				DFDD9F942569B06F001DDDA0 /* UIView.swift */,
 				DFDD9F9C256A54EE001DDDA0 /* UIViewController.swift */,
 				DFDD9FA4256A6458001DDDA0 /* Date.swift */,
+				DF5E0DA7256AF6010021A5AB /* CommonUtility.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -509,6 +512,7 @@
 				DFDD9F99256A44E0001DDDA0 /* TaskNotifier.swift in Sources */,
 				DFDD9F8725699012001DDDA0 /* UITableView.swift in Sources */,
 				DFDD9F6B25696DE5001DDDA0 /* CategoryProvider.swift in Sources */,
+				DF5E0DA8256AF6010021A5AB /* CommonUtility.swift in Sources */,
 				DFDD9F9D256A54EE001DDDA0 /* UIViewController.swift in Sources */,
 				DFDD9F2E2569589E001DDDA0 /* SceneDelegate.swift in Sources */,
 				DFDD9FA5256A6458001DDDA0 /* Date.swift in Sources */,

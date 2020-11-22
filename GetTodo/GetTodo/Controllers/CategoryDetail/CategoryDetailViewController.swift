@@ -51,7 +51,7 @@ extension CategoryDetailViewController{
     }
     
     func showEditing(sender: UIBarButtonItem)
-     {
+    {
         let tableViewIsEditing = tableView.isEditing
         self.tableView.setEditing(!tableViewIsEditing, animated: true)
         sender.title = tableViewIsEditing ? "Edit" : "Done"
@@ -90,7 +90,7 @@ extension CategoryDetailViewController{
         let addTaskViewController:AddTaskViewController = storyBoard.instantiateViewController()
         addTaskViewController.isEditingTask = isEdit
         addTaskViewController.categoryId = category.identifier
-
+        
         if isEdit {
             guard let taskToEdit = taskToEdit else { return }
             addTaskViewController.editingTask = taskToEdit

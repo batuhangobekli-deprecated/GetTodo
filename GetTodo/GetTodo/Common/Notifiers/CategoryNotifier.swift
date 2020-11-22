@@ -23,7 +23,6 @@ extension CategoryObserver {
     }
 }
 
-
 class CategoryNotifier {
     
     struct WeakContainer {
