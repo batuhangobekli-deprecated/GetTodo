@@ -36,6 +36,9 @@
 		DFDD9F902569ADDA001DDDA0 /* CategoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD9F8F2569ADDA001DDDA0 /* CategoryDetailViewController.swift */; };
 		DFDD9F922569ADEA001DDDA0 /* Category.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFDD9F912569ADEA001DDDA0 /* Category.storyboard */; };
 		DFDD9F952569B070001DDDA0 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD9F942569B06F001DDDA0 /* UIView.swift */; };
+		DFDD9F97256A44D1001DDDA0 /* TaskProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD9F96256A44D1001DDDA0 /* TaskProvider.swift */; };
+		DFDD9F99256A44E0001DDDA0 /* TaskNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD9F98256A44E0001DDDA0 /* TaskNotifier.swift */; };
+		DFDD9F9B256A46BA001DDDA0 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD9F9A256A46BA001DDDA0 /* AddTaskViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +75,9 @@
 		DFDD9F8F2569ADDA001DDDA0 /* CategoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailViewController.swift; sourceTree = "<group>"; };
 		DFDD9F912569ADEA001DDDA0 /* Category.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Category.storyboard; sourceTree = "<group>"; };
 		DFDD9F942569B06F001DDDA0 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		DFDD9F96256A44D1001DDDA0 /* TaskProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskProvider.swift; sourceTree = "<group>"; };
+		DFDD9F98256A44E0001DDDA0 /* TaskNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskNotifier.swift; sourceTree = "<group>"; };
+		DFDD9F9A256A46BA001DDDA0 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				DFDD9F4325696043001DDDA0 /* AddTask.storyboard */,
+				DFDD9F9A256A46BA001DDDA0 /* AddTaskViewController.swift */,
 			);
 			path = AddTask;
 			sourceTree = "<group>";
@@ -233,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				DFDD9F6A25696DE5001DDDA0 /* CategoryProvider.swift */,
+				DFDD9F96256A44D1001DDDA0 /* TaskProvider.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -241,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				DFDD9F6D25697187001DDDA0 /* CategoryNotifier.swift */,
+				DFDD9F98256A44E0001DDDA0 /* TaskNotifier.swift */,
 			);
 			path = Notifiers;
 			sourceTree = "<group>";
@@ -431,6 +440,7 @@
 				DFDD9F302569589E001DDDA0 /* HomeViewController.swift in Sources */,
 				DFDD9F952569B070001DDDA0 /* UIView.swift in Sources */,
 				DFDD9F5125696552001DDDA0 /* CategoryModel.swift in Sources */,
+				DFDD9F9B256A46BA001DDDA0 /* AddTaskViewController.swift in Sources */,
 				DFDD9F562569656D001DDDA0 /* UserModel.swift in Sources */,
 				DFDD9F2C2569589E001DDDA0 /* AppDelegate.swift in Sources */,
 				DFDD9F6E25697187001DDDA0 /* CategoryNotifier.swift in Sources */,
@@ -440,8 +450,10 @@
 				DFDD9F4C2569637D001DDDA0 /* RealmObjectAdapter.swift in Sources */,
 				DFDD9F8D2569A3A2001DDDA0 /* UIColor.swift in Sources */,
 				DFDD9F8525698FD9001DDDA0 /* UIStoryboard.swift in Sources */,
+				DFDD9F97256A44D1001DDDA0 /* TaskProvider.swift in Sources */,
 				DFDD9F7625698BC7001DDDA0 /* CategoriesCollectionViewCell.swift in Sources */,
 				DFDD9F892569902D001DDDA0 /* UINib.swift in Sources */,
+				DFDD9F99256A44E0001DDDA0 /* TaskNotifier.swift in Sources */,
 				DFDD9F8725699012001DDDA0 /* UITableView.swift in Sources */,
 				DFDD9F6B25696DE5001DDDA0 /* CategoryProvider.swift in Sources */,
 				DFDD9F2E2569589E001DDDA0 /* SceneDelegate.swift in Sources */,

@@ -21,8 +21,20 @@ class CategoryDetailViewController: UIViewController {
         configViews()
     }
     
+    func presentAddTaskViewController(){
+      let storyBoard = UIStoryboard(name: "AddTask", bundle: nil)
+      let addTaskViewController:AddTaskViewController = storyBoard.instantiateViewController()
+      self.present(addTaskViewController, animated: true, completion: nil)
+    }
+    
+    @objc func didTapAddTask(_ sender: Any) {
+        self.presentAddTaskViewController()
+    }
+    
     func configViews(){
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapAddTask))
         self.navigationController?.navigationBar.tintColor = .white
+        
         tableView.delegate = self
         tableView.dataSource = self
         
