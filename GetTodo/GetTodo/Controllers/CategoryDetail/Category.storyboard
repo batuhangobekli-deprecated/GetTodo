@@ -78,6 +78,7 @@
                     <connections>
                         <outlet property="categoryImageBackView" destination="0fN-E8-bxQ" id="4yu-Ia-BsS"/>
                         <outlet property="categoryImageView" destination="Ohj-e5-jSa" id="b6R-qh-QZn"/>
+                        <outlet property="categoryTotalTasksLabel" destination="M3f-G8-RWJ" id="sUH-FH-GzG"/>
                         <outlet property="tableView" destination="yPd-iq-Xo7" id="USH-kY-9bZ"/>
                         <outlet property="tableViewTopView" destination="5S8-3R-nbK" id="alS-18-XGL"/>
                     </connections>

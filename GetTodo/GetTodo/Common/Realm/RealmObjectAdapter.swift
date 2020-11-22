@@ -14,6 +14,10 @@ class RealmObjectAdapter<T: Object> {
         return try? Realm().objects(T.self)
     }
     
+    func objects(_ type:T.Type) -> Results<T>? {
+        return try? Realm().objects(type)
+    }
+    
     func object(primaryKey:String) -> T? {
         return try? Realm().object(ofType: T.self, forPrimaryKey: primaryKey)
     }

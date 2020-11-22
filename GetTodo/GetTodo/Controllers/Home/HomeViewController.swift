@@ -71,7 +71,8 @@ extension HomeViewController:UICollectionViewDataSource,UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: CategoriesCollectionViewCell = collectionView.dequeueReusableCell(at: indexPath)
         let item = categoryList[indexPath.row]
-        cell.configure(item: item)
+        let totalTaskCount = CategoryProvider.getCategoryTaskCount(categoryId: item.identifier)
+        cell.configure(item: item,totalTask: totalTaskCount)
         return cell
     }
     

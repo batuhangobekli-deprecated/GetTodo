@@ -15,6 +15,6 @@ class TaskTableViewCell: UITableViewCell {
     
     func configure(taskItem:TaskItem){
         taskNameLabel.text = taskItem.taskDescription
-        taskDateLabel.text = taskItem.date.toString(format: "HH:mm · dd LLLL")
+        taskDateLabel.text = taskItem.date.toDateString()
     }
 }

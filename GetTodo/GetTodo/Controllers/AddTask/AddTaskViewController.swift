@@ -10,11 +10,14 @@ import UIKit
 
 class AddTaskViewController: UIViewController {
     @IBOutlet weak var taskDescriptionTextView: UITextView!
-    @IBOutlet weak var taskDateButton: UIButton!
+    @IBOutlet weak var taskDateButton: InputViewButton!
     @IBOutlet weak var taskCategoryButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
+    var categoryId = "0"
     var editingTask:TaskItem?
     var isEditingTask = false
+    let datePicker = UIDatePicker()
+    lazy var pickerView = UIPickerView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,12 +30,13 @@ class AddTaskViewController: UIViewController {
     }
     
     @IBAction func dateButtonDidTap(_ sender: Any) {
-        
+        showDatePicker()
     }
     
     @IBAction func categoryButtonDidTap(_ sender: Any) {
         
     }
+    
     @IBAction func createButtonDidTap(_ sender: Any) {
         if isEditingTask{
             editTask()
@@ -46,33 +50,67 @@ class AddTaskViewController: UIViewController {
 extension AddTaskViewController{
     
     func styleUI() {
+        if let category = CategoryProvider.category(for:self.categoryId){
+            self.taskCategoryButton.setTitle("Category: " + category.name, for: .normal)
+        }
+        
         if isEditingTask{
             self.titleLabel.text = "Edit Task"
             if let taskToEdit = self.editingTask{
-                if let category = CategoryProvider.category(for: taskToEdit.categoryId){
-                    self.taskCategoryButton.setTitle(category.name, for: .normal)
-                }
                 self.taskDescriptionTextView.text = taskToEdit.taskDescription
-                self.taskDateButton.setTitle(taskToEdit.date.description, for: .normal)
+                let dateTitle = "Date: " + taskToEdit.date.toDateString(format: "HH:mm · dd LLLL yyyy")
+                self.taskDateButton.setTitle(dateTitle, for: .normal)
             }
         }else{
             self.taskDateButton.setTitle("Add Date", for: .normal)
-            self.taskCategoryButton.setTitle("Category", for: .normal)
             self.taskDescriptionTextView.text = ""
             self.titleLabel.text = "New Task"
         }
     }
     
+    func showDatePicker(){
+        //Formate Date
+        datePicker.datePickerMode = .date
+        
+        //ToolBar
+        let toolbar = UIToolbar();
+        toolbar.sizeToFit()
+        
+        //done button & cancel button
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(donedatePicker))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style:  .plain, target: self, action: #selector(cancelDatePicker))
+        toolbar.setItems([cancelButton,spaceButton,doneButton], animated: false)
+        
+        // add toolbar to textField
+        taskDateButton.inputAccessoryView = toolbar
+        // add datepicker to textField
+        taskDateButton.inputView = datePicker
+        
+    }
+    
+    @objc func donedatePicker(){
+        let dateTitle = "Date: " + datePicker.date.toDateString(format: "HH:mm · dd LLLL yyyy")
+        taskDateButton.setTitle(dateTitle, for: .normal)
+        self.view.endEditing(true)
+    }
+    
+    @objc func cancelDatePicker(){
+        self.view.endEditing(true)
+    }
     
     func createTask(){
         var newTask = TaskProvider.create()
-        newTask.categoryId = "2"
-        newTask.date = Date()
+        newTask.categoryId = categoryId
+        newTask.date = datePicker.date
         newTask.taskDescription = self.taskDescriptionTextView.text
         TaskProvider.update(task: newTask)
     }
     
     func editTask(){
-        
+        guard var taskToEdit = self.editingTask else{ return }
+        taskToEdit.date = datePicker.date
+        taskToEdit.taskDescription = self.taskDescriptionTextView.text
+        TaskProvider.update(task:taskToEdit)
     }
 }

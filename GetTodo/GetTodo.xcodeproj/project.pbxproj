@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3E5F42B0BB87BD90BC2A4B46 /* Pods_GetTodo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 865AE7B2F71B138907346E91 /* Pods_GetTodo.framework */; };
+		DF85AECF256A87AE00DE16F6 /* InputViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF85AECE256A87AE00DE16F6 /* InputViewButton.swift */; };
 		DFDD9F2C2569589E001DDDA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD9F2B2569589E001DDDA0 /* AppDelegate.swift */; };
 		DFDD9F2E2569589E001DDDA0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD9F2D2569589E001DDDA0 /* SceneDelegate.swift */; };
 		DFDD9F302569589E001DDDA0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD9F2F2569589E001DDDA0 /* HomeViewController.swift */; };
@@ -49,6 +50,7 @@
 		54E67E688D5176E9D4433A68 /* Pods-GetTodo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetTodo.debug.xcconfig"; path = "Target Support Files/Pods-GetTodo/Pods-GetTodo.debug.xcconfig"; sourceTree = "<group>"; };
 		865AE7B2F71B138907346E91 /* Pods_GetTodo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GetTodo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF3A8CAF8FEE3C4645BF8476 /* Pods-GetTodo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GetTodo.release.xcconfig"; path = "Target Support Files/Pods-GetTodo/Pods-GetTodo.release.xcconfig"; sourceTree = "<group>"; };
+		DF85AECE256A87AE00DE16F6 /* InputViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewButton.swift; sourceTree = "<group>"; };
 		DFDD9F282569589E001DDDA0 /* GetTodo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetTodo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFDD9F2B2569589E001DDDA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFDD9F2D2569589E001DDDA0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -192,7 +194,6 @@
 				DFDD9F7225698B85001DDDA0 /* Views */,
 				DFDD9F6C25697176001DDDA0 /* Notifiers */,
 				DFDD9F6925696DD1001DDDA0 /* Providers */,
-				DFDD9F6625696B93001DDDA0 /* Services */,
 				DFDD9F4D256964E0001DDDA0 /* Domain */,
 				DFDD9F48256962BA001DDDA0 /* Realm */,
 			);
@@ -237,13 +238,6 @@
 			path = ItemModels;
 			sourceTree = "<group>";
 		};
-		DFDD9F6625696B93001DDDA0 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
 		DFDD9F6925696DD1001DDDA0 /* Providers */ = {
 			isa = PBXGroup;
 			children = (
@@ -275,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				DFDD9F8A25699D16001DDDA0 /* ColumnFlowLayout.swift */,
+				DF85AECE256A87AE00DE16F6 /* InputViewButton.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -459,6 +454,7 @@
 				DFDD9F6E25697187001DDDA0 /* CategoryNotifier.swift in Sources */,
 				DFDD9F902569ADDA001DDDA0 /* CategoryDetailViewController.swift in Sources */,
 				DFDD9F59256968F7001DDDA0 /* TaskItem.swift in Sources */,
+				DF85AECF256A87AE00DE16F6 /* InputViewButton.swift in Sources */,
 				DFDD9F5B2569691F001DDDA0 /* UserItem.swift in Sources */,
 				DFDD9FA2256A5A6D001DDDA0 /* TaskTableViewCell.swift in Sources */,
 				DFDD9F4C2569637D001DDDA0 /* RealmObjectAdapter.swift in Sources */,

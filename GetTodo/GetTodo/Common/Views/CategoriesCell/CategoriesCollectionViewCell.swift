@@ -15,9 +15,10 @@ class CategoriesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var categoryTitleLabel: UILabel!
     
     
-    func configure(item:CategoryItem){
+    func configure(item:CategoryItem,totalTask:Int = 0){
         categoryImageView.image = UIImage(systemName: item.imageString)
         categoryImageView.tintColor = UIColor(hexString: item.hexColorString)
         categoryTitleLabel.text = item.name
+        categoryTotalTaskLabel.text = "\(totalTask) Tasks"
     }
 }

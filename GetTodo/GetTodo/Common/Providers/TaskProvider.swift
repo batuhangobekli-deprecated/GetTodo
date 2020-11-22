@@ -23,6 +23,10 @@ class TaskProvider {
         return taskModel(for: identifier)?.toItem
     }
     
+    static func tasks(categoryId:String) -> [TaskItem] {
+        return adapter.objects(TaskModel.self)?.filter("categoryId == %@", categoryId).map({$0.toItem}) ?? []
+    }
+    
     @discardableResult static func create() -> TaskItem {
         guard let model = try? adapter.create() else {
             fatalError("RealmObjectAdapter failed to create Object. Please check Realm configuration.")
@@ -78,7 +82,5 @@ extension TaskProvider {
         return adapter.object(primaryKey: identifier)
     }
 }
-
-
 
 

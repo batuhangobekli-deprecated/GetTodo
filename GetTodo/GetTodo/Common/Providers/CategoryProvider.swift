@@ -23,6 +23,10 @@ class CategoryProvider {
         return categoryModel(for: identifier)?.toItem
     }
     
+    static func getCategoryTaskCount(categoryId:String) -> Int {
+        return TaskProvider.tasks(categoryId: categoryId).count
+    }
+    
     @discardableResult static func create(with identifier: String) -> CategoryItem {
         guard let model = try? adapter.create(["identifier": identifier]) else {
             fatalError("RealmObjectAdapter failed to create Object. Please check Realm configuration.")
