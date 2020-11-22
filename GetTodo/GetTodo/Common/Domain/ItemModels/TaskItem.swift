@@ -12,7 +12,7 @@ struct TaskItem {
     
     var identifier: String = ""
     
-    var description: String = ""
+    var taskDescription: String = ""
     
     var date: Date
     
@@ -23,8 +23,8 @@ struct TaskItem {
 
 extension TaskItem {
     init(with model: TaskModel) {
-        identifier = model.userId
-        description = model.description
+        identifier = model.identifier
+        taskDescription = model.taskDescription
         date = model.date
         categoryId = model.categoryId
         userId = model.userId

@@ -25,6 +25,9 @@
                                 <rect key="frame" x="315" y="4" width="50" height="50"/>
                                 <inset key="imageEdgeInsets" minX="4" minY="4" maxX="4" maxY="4"/>
                                 <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="closeButtonDidTap:" destination="Fe5-dK-sKV" eventType="touchUpInside" id="1bJ-De-xKX"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9jL-Cd-uHG">
                                 <rect key="frame" x="16" y="98.5" width="343" height="128"/>
@@ -56,6 +59,9 @@
                                 <state key="normal" title="Add Date" image="bell" catalog="system">
                                     <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="dateButtonDidTap:" destination="Fe5-dK-sKV" eventType="touchUpInside" id="dR5-Jn-cS2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WgT-SM-rde">
                                 <rect key="frame" x="16" y="304" width="343" height="21"/>
@@ -64,6 +70,9 @@
                                 <state key="normal" title="Category" image="tag" catalog="system">
                                     <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="categoryButtonDidTap:" destination="Fe5-dK-sKV" eventType="touchUpInside" id="1ZY-u7-ISl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P49-6f-NGX">
                                 <rect key="frame" x="16" y="602" width="343" height="45"/>
@@ -74,6 +83,9 @@
                                 <state key="normal" title="Create">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="createButtonDidTap:" destination="Fe5-dK-sKV" eventType="touchUpInside" id="TmU-pg-fmq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -105,6 +117,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4l9-tA-DT3"/>
                     </view>
+                    <connections>
+                        <outlet property="taskCategoryButton" destination="WgT-SM-rde" id="QHb-Zl-T3H"/>
+                        <outlet property="taskDateButton" destination="Udj-6n-XbO" id="zkM-Ul-uJm"/>
+                        <outlet property="taskDescriptionTextView" destination="9jL-Cd-uHG" id="zyd-e7-Bne"/>
+                        <outlet property="titleLabel" destination="CLv-44-zkG" id="pZ2-OG-dRD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4fE-oH-Qct" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

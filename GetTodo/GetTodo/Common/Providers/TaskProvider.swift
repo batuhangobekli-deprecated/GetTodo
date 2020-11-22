@@ -23,8 +23,8 @@ class TaskProvider {
         return taskModel(for: identifier)?.toItem
     }
     
-    @discardableResult static func create(with identifier: String) -> TaskItem {
-        guard let model = try? adapter.create(["identifier": identifier]) else {
+    @discardableResult static func create() -> TaskItem {
+        guard let model = try? adapter.create() else {
             fatalError("RealmObjectAdapter failed to create Object. Please check Realm configuration.")
         }
         return model.toItem
@@ -34,14 +34,14 @@ class TaskProvider {
         guard let model = taskModel(for: task.identifier) else { return }
         try? RealmService.write {
             model.date = task.date
-            model.taskDescription = task.description
+            model.taskDescription = task.taskDescription
             model.userId = task.userId
             model.categoryId = task.categoryId
         }
     }
     
-    static func remove(category: CategoryItem) {
-        guard let model = taskModel(for: category.identifier) else { return }
+    static func remove(task: TaskItem) {
+        guard let model = taskModel(for: task.identifier) else { return }
         try? RealmService.remove(model)
     }
 }

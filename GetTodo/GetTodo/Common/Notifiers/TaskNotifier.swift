@@ -14,11 +14,11 @@ protocol TaskObserver: AnyObject {
 }
 
 extension TaskObserver {
-    func startObservingCategories() {
+    func startObservingTasks() {
         TaskNotifier.shared.add(self)
     }
     
-    func stopObservingCategories() {
+    func stopObservingTasks() {
         TaskNotifier.shared.remove(self)
     }
 }
