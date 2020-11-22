@@ -29,19 +29,12 @@ class TaskProvider {
             .map({$0.toItem}) ?? []
     }
     
-//    @discardableResult static func create() -> TaskItem {
-//        guard let model = try? adapter.create() else {
-//            fatalError("RealmObjectAdapter failed to create Object. Please check Realm configuration.")
-//        }
-//        return model.toItem
-//    }
-    
-
-     static func create(task:TaskItem){
-        guard let model = try? adapter.create(["taskDescription":task.taskDescription,"date":task.date,"categoryId":task.categoryId,"userId":Dataholder.shared.currentUserId]) else {
-               fatalError("RealmObjectAdapter failed to create Object. Please check Realm configuration.")
-           }
-       }
+    static func create(task:TaskItem){
+        guard (try? adapter.create(["taskDescription":task.taskDescription,"date":task.date,"categoryId":task.categoryId,"userId":Dataholder.shared.currentUserId])) != nil else
+        {
+                fatalError("RealmObjectAdapter failed to create Object. Please check Realm configuration.")
+        }
+    }
     
     
     static func update(task: TaskItem) {

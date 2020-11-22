@@ -38,11 +38,9 @@ class CategoryProvider {
         if categoryModel(for: categoryItem.identifier) != nil{
             return
         }
-        
-        guard (try? adapter.create(["identifier": categoryItem.identifier])) != nil else {
+        guard (try? adapter.create(["identifier": categoryItem.identifier,"name":categoryItem.name,"imageString":categoryItem.imageString,"hexColorString":categoryItem.hexColorString])) != nil else {
             fatalError("RealmObjectAdapter failed to create Object. Please check Realm configuration.")
         }
-        update(category: categoryItem)
     }
     
     static func update(category: CategoryItem) {

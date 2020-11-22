@@ -138,7 +138,7 @@ It is developed with ❤️ for Getir interview
                                     <constraint firstAttribute="height" constant="60" id="Q4h-Rh-W3h"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Tu-KZ-oEr">
                                 <rect key="frame" x="20" y="670.5" width="374" height="60"/>
@@ -329,8 +329,8 @@ It is developed with ❤️ for Getir interview
     </scenes>
     <resources>
         <image name="backArrow" width="32" height="32"/>
-        <image name="logo" width="738.5" height="196.5"/>
-        <image name="onboardingBackImage" width="414" height="504"/>
-        <image name="onboardingGirlImage" width="332.5" height="243"/>
+        <image name="logo" width="1477" height="393"/>
+        <image name="onboardingBackImage" width="828" height="1008"/>
+        <image name="onboardingGirlImage" width="665" height="486"/>
     </resources>
 </document>

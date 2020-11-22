@@ -9,10 +9,10 @@
 import Foundation
 
 struct CategoryItem {
-    var identifier = ""
-    var name = ""
-    var imageString = ""
-    var hexColorString = ""
+    var identifier:String = ""
+    var name:String = ""
+    var imageString:String = ""
+    var hexColorString:String = ""
 }
 
 

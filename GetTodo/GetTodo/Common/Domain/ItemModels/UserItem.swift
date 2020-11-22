@@ -10,13 +10,13 @@ import Foundation
 
 struct UserItem {
     
-    var identifier = ""
+    var identifier:String = ""
     
-    var email = ""
+    var email:String = ""
     
-    var password = ""
+    var password:String = ""
     
-    var nameSurname = ""
+    var nameSurname:String = ""
     
 }
 
