@@ -30,39 +30,6 @@ class UserProvider {
         return userModel(for: identifier)?.toItem
     }
     
-    /// Login user with given parameters
-    ///
-    /// - Parameter email: email of user
-    /// - Parameter password: password of user
-    /// - Returns: Tuple contains loginResult and  user primarykey
-    static func login(email:String,password:String) -> (isSuccess:Bool,currentUserId:String){
-        let userModel = adapter.objects(UserModel.self)?
-            .filter("email == %@", email)
-            .filter("password == %@", password).first
-        
-        if let user = userModel{
-            return (true,user.identifier)
-        }
-        return(false,"")
-    }
-    
-    /// Register user with given parameters
-    ///
-    /// - Parameter email: email to register
-    /// - Parameter password: password to register
-    /// - Parameter fullName: fullname of user
-    /// - Returns: Tuple contains loginResult and  created user primarykey
-    static func register(email:String,password:String,fullName:String) -> (isSuccess:Bool,currentUserId:String){
-        let sameEmailUser = adapter.objects(UserModel.self)?
-            .filter("email == %@", email).first
-        
-        if sameEmailUser == nil{
-            let createdUser = create(email: email, password: password, fullName: fullName)
-            return (true,createdUser.identifier)
-        }
-        return (false,"")
-    }
-    
     /// Creates user in database
     ///
     /// - Parameter email: email to create
@@ -97,6 +64,43 @@ class UserProvider {
     }
 }
 
+//MARK: - AUTHENTICATION
+extension UserProvider{
+    /// Login user with given parameters
+      ///
+      /// - Parameter email: email of user
+      /// - Parameter password: password of user
+      /// - Returns: Tuple contains loginResult and  user primarykey
+      static func login(email:String,password:String) -> (isSuccess:Bool,currentUserId:String){
+          let userModel = adapter.objects(UserModel.self)?
+              .filter("email == %@", email)
+              .filter("password == %@", password).first
+          
+          if let user = userModel{
+              return (true,user.identifier)
+          }
+          return(false,"")
+      }
+      
+      /// Register user with given parameters
+      ///
+      /// - Parameter email: email to register
+      /// - Parameter password: password to register
+      /// - Parameter fullName: fullname of user
+      /// - Returns: Tuple contains loginResult and  created user primarykey
+      static func register(email:String,password:String,fullName:String) -> (isSuccess:Bool,currentUserId:String){
+          let sameEmailUser = adapter.objects(UserModel.self)?
+              .filter("email == %@", email).first
+          
+          if sameEmailUser == nil{
+              let createdUser = create(email: email, password: password, fullName: fullName)
+              return (true,createdUser.identifier)
+          }
+          return (false,"")
+      }
+}
+
+//MARK: - TOKEN/NOTIFICATON
 extension UserProvider {
     /// Creates notification token for changes in user list
     ///
