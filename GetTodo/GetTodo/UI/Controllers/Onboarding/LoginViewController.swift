@@ -27,20 +27,35 @@ class LoginViewController: UIViewController {
     }
 }
 
-
+//MARK: - PROVIDER FUNCTIONS
 extension LoginViewController {
+    
+    /// Check for valid email adress && check for pasword
+    /// Then call Providers Login function
     func login(){
         let emailAdress = emailAdressTextField.text ?? ""
         let password = passwordTextfield.text ?? ""
         
+        //Check for email is valid
         if CommonUtility.shared.isValidEmail(emailAdress){
+            
+            //Check for password is empty
             if !password.isEmpty {
+                
+                //Assign login result to loginResultTuple  
                 let loginResultTuple = UserProvider.login(email: emailAdress,password: password)
                 
+                //Check for login is success
                 if !loginResultTuple.isSuccess{
                     CommonUtility.shared.prepareBasicAlert(message:"Please check your email and password" , title: "Error", buttonTitle: "OK", viewController: self)
+                    
                 }else{
+                    
+                    //For temp data holding act as tokenization system used TempDataHolder
+                    //Assign currentUserId to temp currentUserId
                     TempDataHolder.shared.currentUserId = loginResultTuple.currentUserId
+                    
+                    //Then navigate to home page
                     CommonUtility.shared.navigateToHomePage(navigationController: self.navigationController)
                 }
             }else{

@@ -11,6 +11,7 @@
 		DF5E0DA8256AF6010021A5AB /* CommonUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5E0DA7256AF6010021A5AB /* CommonUtility.swift */; };
 		DF5E0DB0256B0FB10021A5AB /* RoundRectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5E0DAF256B0FB10021A5AB /* RoundRectButton.swift */; };
 		DF5E0DB2256B12550021A5AB /* RoundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5E0DB1256B12550021A5AB /* RoundTextField.swift */; };
+		DF5E0DB4256BD3AC0021A5AB /* RealmObjectAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5E0DB3256BD3AC0021A5AB /* RealmObjectAdapter.swift */; };
 		DF85AECF256A87AE00DE16F6 /* InputViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF85AECE256A87AE00DE16F6 /* InputViewButton.swift */; };
 		DF85AED1256A932300DE16F6 /* UserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF85AED0256A932300DE16F6 /* UserProvider.swift */; };
 		DF85AED3256A945200DE16F6 /* UserNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF85AED2256A945200DE16F6 /* UserNotifier.swift */; };
@@ -27,7 +28,6 @@
 		DFDD9F4425696043001DDDA0 /* AddTask.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFDD9F4325696043001DDDA0 /* AddTask.storyboard */; };
 		DFDD9F462569605E001DDDA0 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFDD9F452569605E001DDDA0 /* Home.storyboard */; };
 		DFDD9F4A256962DE001DDDA0 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD9F49256962DE001DDDA0 /* RealmService.swift */; };
-		DFDD9F4C2569637D001DDDA0 /* RealmObjectAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD9F4B2569637D001DDDA0 /* RealmObjectAdapter.swift */; };
 		DFDD9F5125696552001DDDA0 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD9F5025696552001DDDA0 /* CategoryModel.swift */; };
 		DFDD9F5425696563001DDDA0 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD9F5325696563001DDDA0 /* TaskModel.swift */; };
 		DFDD9F562569656D001DDDA0 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFDD9F552569656D001DDDA0 /* UserModel.swift */; };
@@ -63,6 +63,7 @@
 		DF5E0DA7256AF6010021A5AB /* CommonUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUtility.swift; sourceTree = "<group>"; };
 		DF5E0DAF256B0FB10021A5AB /* RoundRectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundRectButton.swift; sourceTree = "<group>"; };
 		DF5E0DB1256B12550021A5AB /* RoundTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundTextField.swift; sourceTree = "<group>"; };
+		DF5E0DB3256BD3AC0021A5AB /* RealmObjectAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmObjectAdapter.swift; sourceTree = "<group>"; };
 		DF85AECE256A87AE00DE16F6 /* InputViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewButton.swift; sourceTree = "<group>"; };
 		DF85AED0256A932300DE16F6 /* UserProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProvider.swift; sourceTree = "<group>"; };
 		DF85AED2256A945200DE16F6 /* UserNotifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotifier.swift; sourceTree = "<group>"; };
@@ -81,7 +82,6 @@
 		DFDD9F4325696043001DDDA0 /* AddTask.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddTask.storyboard; sourceTree = "<group>"; };
 		DFDD9F452569605E001DDDA0 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		DFDD9F49256962DE001DDDA0 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
-		DFDD9F4B2569637D001DDDA0 /* RealmObjectAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmObjectAdapter.swift; sourceTree = "<group>"; };
 		DFDD9F5025696552001DDDA0 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		DFDD9F5325696563001DDDA0 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 		DFDD9F552569656D001DDDA0 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
@@ -192,8 +192,8 @@
 		DF5E0DAE256B0A9B0021A5AB /* Realm */ = {
 			isa = PBXGroup;
 			children = (
+				DF5E0DB3256BD3AC0021A5AB /* RealmObjectAdapter.swift */,
 				DFDD9F49256962DE001DDDA0 /* RealmService.swift */,
-				DFDD9F4B2569637D001DDDA0 /* RealmObjectAdapter.swift */,
 			);
 			path = Realm;
 			sourceTree = "<group>";
@@ -524,8 +524,8 @@
 				DF85AEDF256ACB9200DE16F6 /* TempDataHolder.swift in Sources */,
 				DFDD9F5B2569691F001DDDA0 /* UserItem.swift in Sources */,
 				DFDD9FA2256A5A6D001DDDA0 /* TaskTableViewCell.swift in Sources */,
-				DFDD9F4C2569637D001DDDA0 /* RealmObjectAdapter.swift in Sources */,
 				DFDD9F8D2569A3A2001DDDA0 /* UIColor.swift in Sources */,
+				DF5E0DB4256BD3AC0021A5AB /* RealmObjectAdapter.swift in Sources */,
 				DFDD9F8525698FD9001DDDA0 /* UIStoryboard.swift in Sources */,
 				DFDD9F97256A44D1001DDDA0 /* TaskProvider.swift in Sources */,
 				DFDD9F7625698BC7001DDDA0 /* CategoriesCollectionViewCell.swift in Sources */,

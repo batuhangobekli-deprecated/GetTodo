@@ -9,6 +9,7 @@
 import Foundation
 import RealmSwift
 
+/// Protocol for views/objects to register user changes
 protocol UserObserver: AnyObject {
     func onDidChange(users: [UserItem])
 }
@@ -23,9 +24,10 @@ extension UserObserver {
     }
 }
 
-
+/// Stores weak references to observers which would like to get notified about changes in user list.
 class UserNotifier {
     
+    /// Container to store weak references to observers
     struct WeakContainer {
         weak var value: UserObserver?
     }
@@ -36,11 +38,17 @@ class UserNotifier {
         configure()
     }
     
+    /// Adds observer to notifier
+    ///
+    /// - Parameter observer: observer instance which would like to get notifications
     func add(_ observer: UserObserver) {
         compact()
         observers.append(WeakContainer(value: observer))
     }
     
+    /// Removes observer from notifier
+    ///
+    /// - Parameter observer: observer instance
     func remove(_ observer: UserObserver) {
         if let index = observers.firstIndex(where: { $0.value === observer }) {
             observers.remove(at: index)
@@ -48,6 +56,9 @@ class UserNotifier {
         compact()
     }
     
+    /// Notifies observers that specified users did change their state
+    ///
+    /// - Parameter users: list of users which changed their state
     func notifyOnDidChange(_ users: [UserItem]) {
         observers.forEach({ $0.value?.onDidChange(users: users)})
     }
@@ -57,6 +68,7 @@ class UserNotifier {
 }
 
 private extension UserNotifier {
+    /// Configures listening for changes in UserProvider
     func configure() {
         token?.invalidate()
         token = UserProvider.token { [weak self] in
@@ -65,6 +77,7 @@ private extension UserNotifier {
         }
     }
     
+    /// Removes containers whose observers has been deallocated
     func compact() {
         observers = observers.filter({ $0.value != nil })
     }

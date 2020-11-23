@@ -9,31 +9,39 @@
 import Foundation
 import RealmSwift
 
+/// Category Provider ( Table Data Gateway and Row Data Gateway) manages Category Domain objects
 class CategoryProvider {
     
-    private static let adapter = RealmObjectAdapter<CategoryModel>()
+    private static let adapter = RealmAdapter<CategoryModel>()
     
     static let shared = CategoryProvider()
     
+    /// Returns all categories
+    ///
+    /// - Returns: Array of categories recorded to realm
     static func categories() -> [CategoryItem] {
         return adapter.objects()?.map({$0.toItem}) ?? []
     }
     
+    /// Returns category by its primary key
+    ///
+    /// - Parameter identifier: primary key of category
+    /// - Returns: Optional CategoryItem  instance
     static func category(for identifier: String) -> CategoryItem? {
         return categoryModel(for: identifier)?.toItem
     }
     
+    /// Returns task count of selected category
+    ///
+    /// - Parameter categoryId: primary key of category
+    /// - Returns: count of tasks by selected category
     static func getCategoryTaskCount(categoryId:String) -> Int {
         return TaskProvider.tasks(categoryId: categoryId).count
     }
     
-    @discardableResult static func create(with identifier: String) -> CategoryItem {
-        guard let model = try? adapter.create(["identifier": identifier]) else {
-            fatalError("RealmObjectAdapter failed to create Object. Please check Realm configuration.")
-        }
-        return model.toItem
-    }
-    
+    /// Creates category in realm by given categoryItem
+    ///
+    /// - Parameter categoryItem: category item object to create
     static func create(with categoryItem: CategoryItem) {
         if categoryModel(for: categoryItem.identifier) != nil{
             return
@@ -43,6 +51,9 @@ class CategoryProvider {
         }
     }
     
+    /// Updates category model in database with category item
+    ///
+    /// - Parameter category: category item object to update
     static func update(category: CategoryItem) {
         guard let model = categoryModel(for: category.identifier) else { return }
         try? RealmService.write {
@@ -52,6 +63,9 @@ class CategoryProvider {
         }
     }
     
+    /// Deletes category model in database with category item
+    ///
+    /// - Parameter user: category  item object to delete
     static func remove(category: CategoryItem) {
         guard let model = categoryModel(for: category.identifier) else { return }
         try? RealmService.remove(model)
@@ -60,6 +74,10 @@ class CategoryProvider {
 
 extension CategoryProvider {
     
+    /// Creates notification token for changes in user list
+    ///
+    /// - Parameter onDidChange: completion closure called on change
+    /// - Returns: returns notification token which has to be stored as strong reference
     static func token(_ onDidChange: @escaping ()->() ) -> NotificationToken? {
         return adapter.objects()?.observe({ (change) in
             switch change {
@@ -70,7 +88,11 @@ extension CategoryProvider {
         })
     }
     
-    
+    /// Creates notification token for changes in specified category
+    ///
+    /// - Parameter category: completion closure called on change
+    /// - Parameter onDidChange: completion closure called on change
+    /// - Returns: returns notification token which has to be stored as strong reference
     static func token(for category: CategoryItem, _ onDidChange: @escaping ()->() ) -> NotificationToken? {
         if let model = categoryModel(for: category.identifier) {
             return model.observe { (change) in
@@ -86,12 +108,18 @@ extension CategoryProvider {
 }
 
 extension CategoryProvider {
+    /// Check and instantiate category model for given identifier(pk)
+    ///
+    /// - Parameter identifier: category pk to search
+    /// - Returns: Optional category model if exist
     static func categoryModel(for identifier: String) -> CategoryModel? {
         return adapter.object(primaryKey: identifier)
     }
 }
 
 extension CategoryProvider {
+    
+    /// Creates category models in realm if not exist
     func createUserDummyCategories() {
         var travelCategory = CategoryItem()
         travelCategory.identifier = "1"

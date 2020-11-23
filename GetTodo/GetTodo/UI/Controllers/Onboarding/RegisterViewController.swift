@@ -29,20 +29,35 @@ class RegisterViewController: UIViewController {
     }
 }
 
+//MARK: - PROVIDER FUNCTIONS
 extension RegisterViewController{
+    /// Check for valid email adress && check for pasword &&  check for fullname
+    /// Then call Providers Register function
     func register(){
         let emailAdress = emailAdressTextField.text ?? ""
         let password = passwordTextfield.text ?? ""
         let fullName = fullNameTextField.text ?? ""
         
+        //Check for email is valid
         if CommonUtility.shared.isValidEmail(emailAdress){
+            
+            //Check for password is empty and full name is empty
             if !password.isEmpty && !fullName.isEmpty {
+                
+                //Assign register result to registerResultTuple
                 let registerResultTuple = UserProvider.register(email: self.emailAdressTextField.text ?? "", password: self.passwordTextfield.text ?? "", fullName: fullNameTextField.text ?? "")
                 
+                //Check for register is success
                 if !(registerResultTuple.isSuccess){
                     CommonUtility.shared.prepareBasicAlert(message:"Email is already in use.Please enter another email",title:"Error",buttonTitle:"OK", viewController: self)
+                    
                 }else{
+                    
+                    //For temp data holding act as tokenization system used TempDataHolder
+                    //Assign currentUserId to temp currentUserId
                     TempDataHolder.shared.currentUserId = registerResultTuple.currentUserId
+                    
+                    //Then navigate to home page
                     CommonUtility.shared.navigateToHomePage(navigationController: self.navigationController)
                 }
             }else{

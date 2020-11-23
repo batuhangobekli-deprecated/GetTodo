@@ -10,26 +10,35 @@ import UIKit
 
 class HomeViewController: UIViewController{
     @IBOutlet weak var collectionView: UICollectionView!
+    var categoryList : [CategoryItem] = []{
+        //Observe for changes in category list
+        didSet{
+            self.collectionView.reloadData()
+        }
+    }
+    //Initialize column layout with custom values
     let columnLayout = ColumnFlowLayout(
         cellsPerRow: 2,
         minimumInteritemSpacing: 10,
         minimumLineSpacing: 10,
         sectionInset: UIEdgeInsets(top: 15, left: 15, bottom: 15 ,right: 15)
     )
-    var categoryList : [CategoryItem] = []{
-        didSet{
-            self.collectionView.reloadData()
-        }
-    }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Customize navigation style
         navigationController?.navigationBar.prefersLargeTitles = true
         self.title = "Home"
+        
+        //Style collectionview
+        configureCollectionView()
+        
+        //Call observing functions
         startObservingTasks()
         startObservingCategories()
-        configureCollectionView()
+        
+        //Get user's categories
         getUsersCategories()
     }
     
@@ -38,12 +47,32 @@ class HomeViewController: UIViewController{
     }
 }
 
-//MARK: - Helper methods
-extension HomeViewController {
+//MARK: - CategoryObserver
+extension HomeViewController:CategoryObserver{
+    func onDidChange(categories: [CategoryItem]) {
+        self.categoryList = categories
+    }
+}
+
+//MARK: - TaskObserver
+extension HomeViewController:TaskObserver{
+    func onDidChange(tasks: [TaskItem]) {
+        self.collectionView.reloadData()
+    }
+}
+
+//MARK: - PROVIDER FUNCTIONS
+extension HomeViewController{
+    ///Get User's categories and apply to self list
     func getUsersCategories(){
         self.categoryList = CategoryProvider.categories()
     }
+}
+
+//MARK: - Helper methods
+extension HomeViewController {
     
+    /// Applies collectionview settings
     func configureCollectionView() {
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -51,6 +80,9 @@ extension HomeViewController {
         collectionView.collectionViewLayout = columnLayout
     }
     
+    /// Push to CategoryDetailViewController with given categoryItem
+    ///
+    /// - Parameter item: categoryItem of selected
     func navigateToCategoryDetail(item:CategoryItem){
         guard let navigationController =  self.navigationController else{
             return
@@ -62,6 +94,7 @@ extension HomeViewController {
     }
 }
 
+//MARK: - UICollectionViewDataSource,UICollectionViewDelegate
 extension HomeViewController:UICollectionViewDataSource,UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return categoryList.count
@@ -69,26 +102,22 @@ extension HomeViewController:UICollectionViewDataSource,UICollectionViewDelegate
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: CategoriesCollectionViewCell = collectionView.dequeueReusableCell(at: indexPath)
-        let item = categoryList[indexPath.row]
         cell.shadowDecorate()
+        
+        //Get category at index
+        let item = categoryList[indexPath.row]
+        
+        //Calculate totalTask count by calling Provider function
         let totalTaskCount = CategoryProvider.getCategoryTaskCount(categoryId: item.identifier)
+        
+        //Send data to cell
         cell.configure(item: item,totalTask: totalTaskCount)
+        
+        //Returns CategoriesCollectionViewCell
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.navigateToCategoryDetail(item: self.categoryList[indexPath.row])
-    }
-}
-
-extension HomeViewController:CategoryObserver{
-    func onDidChange(categories: [CategoryItem]) {
-        self.categoryList = categories
-    }
-}
-
-extension HomeViewController:TaskObserver{
-    func onDidChange(tasks: [TaskItem]) {
-        self.collectionView.reloadData()
     }
 }

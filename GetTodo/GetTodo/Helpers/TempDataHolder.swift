@@ -8,8 +8,13 @@
 
 import Foundation
 
+///For handling clone use-case of tokenization
+///Stores temporarly current user id when login & register
 class TempDataHolder {
+    
     public static let shared = TempDataHolder()
     
+    //Stores current user id temporarly
+    //Alloacated after user kills the applicatiın
     var currentUserId:String = ""
 }

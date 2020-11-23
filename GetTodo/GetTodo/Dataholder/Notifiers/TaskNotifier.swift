@@ -9,6 +9,7 @@
 import Foundation
 import RealmSwift
 
+/// Protocol for views/objects to register task changes
 protocol TaskObserver: AnyObject {
     func onDidChange(tasks: [TaskItem])
 }
@@ -23,9 +24,10 @@ extension TaskObserver {
     }
 }
 
-
+/// Stores weak references to observers which would like to get notified about changes in task list.
 class TaskNotifier {
     
+    /// Container to store weak references to observers
     struct WeakContainer {
         weak var value: TaskObserver?
     }
@@ -36,11 +38,17 @@ class TaskNotifier {
         configure()
     }
     
+    /// Adds observer to notifier
+    ///
+    /// - Parameter observer: observer instance which would like to get notifications
     func add(_ observer: TaskObserver) {
         compact()
         observers.append(WeakContainer(value: observer))
     }
     
+    /// Removes observer from notifier
+    ///
+    /// - Parameter observer: observer instance
     func remove(_ observer: TaskObserver) {
         if let index = observers.firstIndex(where: { $0.value === observer }) {
             observers.remove(at: index)
@@ -48,6 +56,9 @@ class TaskNotifier {
         compact()
     }
     
+    /// Notifies observers that specified tasks did change their state
+    ///
+    /// - Parameter tasks: list of tasks which changed their state
     func notifyOnDidChange(_ tasks: [TaskItem]) {
         observers.forEach({ $0.value?.onDidChange(tasks: tasks)})
     }
@@ -57,6 +68,7 @@ class TaskNotifier {
 }
 
 private extension TaskNotifier {
+    /// Configures listening for changes in TaskProvider
     func configure() {
         token?.invalidate()
         token = TaskProvider.token { [weak self] in
@@ -65,6 +77,7 @@ private extension TaskNotifier {
         }
     }
     
+    /// Removes containers whose observers has been deallocated
     func compact() {
         observers = observers.filter({ $0.value != nil })
     }

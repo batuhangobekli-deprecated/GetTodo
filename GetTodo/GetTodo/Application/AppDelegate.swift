@@ -13,7 +13,14 @@ import IQKeyboardManagerSwift
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        //For visually improved keyboard use case enable IQKeyboard
         IQKeyboardManager.shared.enable = true
+
+        //First configure realm
+        RealmService.configure()
+        
+        //Then create initally dummy categories for all users once
         CategoryProvider.shared.createUserDummyCategories()
         return true
     }

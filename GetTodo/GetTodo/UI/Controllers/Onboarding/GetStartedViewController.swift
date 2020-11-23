@@ -10,8 +10,10 @@ import UIKit
 
 class GetStartedViewController: UIViewController {
 
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        //To achive navigationbar to hidden 
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
@@ -24,13 +26,16 @@ class GetStartedViewController: UIViewController {
     }
 }
 
+//MARK: - HELPER FUNCTIONS
 extension GetStartedViewController{
+    
+    ///Navigates to Login View Controller
     func navigateToLogin(){
         let storyBoard = UIStoryboard(name: "Onboarding", bundle: nil)
         let loginViewController:LoginViewController = storyBoard.instantiateViewController()
         self.navigationController?.pushViewController(loginViewController, animated: true)
     }
-    
+    ///Navigates to Register View Controller
     func navigateToRegister(){
         let storyBoard = UIStoryboard(name: "Onboarding", bundle: nil)
         let registerViewController:RegisterViewController = storyBoard.instantiateViewController()

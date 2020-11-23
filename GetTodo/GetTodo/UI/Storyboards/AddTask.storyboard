@@ -119,6 +119,7 @@
                         <viewLayoutGuide key="safeArea" id="4l9-tA-DT3"/>
                     </view>
                     <connections>
+                        <outlet property="createEditButton" destination="P49-6f-NGX" id="ofQ-WX-M09"/>
                         <outlet property="taskCategoryButton" destination="WgT-SM-rde" id="QHb-Zl-T3H"/>
                         <outlet property="taskDateButton" destination="Udj-6n-XbO" id="zkM-Ul-uJm"/>
                         <outlet property="taskDescriptionTextView" destination="9jL-Cd-uHG" id="zyd-e7-Bne"/>
