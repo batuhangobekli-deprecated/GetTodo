@@ -1,6 +1,8 @@
 # GetTodo
 
-Todo application written with swift.
+Todo application written with Swift.
+
+Logos made with https://www.photopea.com/
 
 To build application required:
 Xcode 11.6 or higher 
