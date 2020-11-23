@@ -55,6 +55,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Udj-6n-XbO" customClass="InputViewButton" customModule="GetTodo" customModuleProvider="target">
                                 <rect key="frame" x="16" y="266.5" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="tintColor" red="0.52549019610000003" green="0.33333333329999998" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="titleEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Add Date" image="bell" catalog="system">
                                     <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -66,6 +67,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WgT-SM-rde">
                                 <rect key="frame" x="16" y="307.5" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="tintColor" red="0.52549019610000003" green="0.33333333329999998" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="titleEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Category" image="tag" catalog="system">
                                     <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -74,11 +76,10 @@
                                     <action selector="categoryButtonDidTap:" destination="Fe5-dK-sKV" eventType="touchUpInside" id="1ZY-u7-ISl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P49-6f-NGX">
-                                <rect key="frame" x="16" y="602" width="343" height="45"/>
-                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P49-6f-NGX" customClass="RoundRectButton" customModule="GetTodo" customModuleProvider="target">
+                                <rect key="frame" x="16" y="587" width="343" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="oZA-nH-lt5"/>
+                                    <constraint firstAttribute="height" constant="60" id="oZA-nH-lt5"/>
                                 </constraints>
                                 <state key="normal" title="Create">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

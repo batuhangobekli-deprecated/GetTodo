@@ -32,17 +32,18 @@ class AddTaskViewController: UIViewController {
         showDatePicker()
     }
     
-    @IBAction func categoryButtonDidTap(_ sender: Any) {
-        
-    }
-    
     @IBAction func createButtonDidTap(_ sender: Any) {
-        if isEditingTask{
-            editTask()
+        let taskDescription = taskDescriptionTextView.text ?? ""
+        if !taskDescription.isEmpty{
+            if isEditingTask{
+                editTask()
+            }else{
+                createTask()
+            }
+            self.dismiss(animated: true, completion: nil)
         }else{
-            createTask()
+            CommonUtility.shared.prepareBasicAlert(message: "Please fill the task description", title: "Error", buttonTitle: "OK", viewController: self)
         }
-        self.dismiss(animated: true, completion: nil)
     }
 }
 
@@ -66,7 +67,23 @@ extension AddTaskViewController{
             self.titleLabel.text = "New Task"
         }
     }
+}
+
+extension AddTaskViewController{
+    func createTask(){
+        let newTask = TaskItem(taskDescription: self.taskDescriptionTextView.text, date: datePicker.date, categoryId:  categoryId)
+        TaskProvider.create(task:newTask)
+    }
     
+    func editTask(){
+        guard var taskToEdit = self.editingTask else{ return }
+        taskToEdit.date = datePicker.date
+        taskToEdit.taskDescription = self.taskDescriptionTextView.text
+        TaskProvider.update(task:taskToEdit)
+    }
+}
+
+extension AddTaskViewController {
     func showDatePicker(){
         //Formate Date
         datePicker.datePickerMode = .dateAndTime
@@ -95,17 +112,5 @@ extension AddTaskViewController{
     
     @objc func cancelDatePicker(){
         self.view.endEditing(true)
-    }
-    
-    func createTask(){
-        let newTask = TaskItem(taskDescription: self.taskDescriptionTextView.text, date: datePicker.date, categoryId:  categoryId)
-        TaskProvider.create(task:newTask)
-    }
-    
-    func editTask(){
-        guard var taskToEdit = self.editingTask else{ return }
-        taskToEdit.date = datePicker.date
-        taskToEdit.taskDescription = self.taskDescriptionTextView.text
-        TaskProvider.update(task:taskToEdit)
     }
 }

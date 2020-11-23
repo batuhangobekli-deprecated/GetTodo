@@ -113,13 +113,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Back" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8W-8t-VX9">
-                                <rect key="frame" x="16" y="410.5" width="382" height="35"/>
+                                <rect key="frame" x="16" y="380.5" width="382" height="35"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="29"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email Adress" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="chF-GA-uZs" customClass="RoundTextField" customModule="GetTodo" customModuleProvider="target">
-                                <rect key="frame" x="20" y="500.5" width="374" height="60"/>
+                                <rect key="frame" x="20" y="455.5" width="374" height="60"/>
                                 <color key="backgroundColor" red="0.94901960784313721" green="0.95294117647058818" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="KSD-MO-7zJ"/>
@@ -136,7 +136,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2LB-F0-H62" customClass="RoundTextField" customModule="GetTodo" customModuleProvider="target">
-                                <rect key="frame" x="20" y="580.5" width="374" height="60"/>
+                                <rect key="frame" x="20" y="535.5" width="374" height="60"/>
                                 <color key="backgroundColor" red="0.94901960784313721" green="0.95294117647058818" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Q4h-Rh-W3h"/>
@@ -145,7 +145,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Tu-KZ-oEr" customClass="RoundRectButton" customModule="GetTodo" customModuleProvider="target">
-                                <rect key="frame" x="20" y="670.5" width="374" height="60"/>
+                                <rect key="frame" x="20" y="625.5" width="374" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="OiL-3e-TyG"/>
                                 </constraints>
@@ -187,8 +187,8 @@
                             <constraint firstItem="y2X-Bl-NMo" firstAttribute="leading" secondItem="pr2-u7-Q2n" secondAttribute="leading" constant="80" id="rgh-Vh-5Si"/>
                             <constraint firstItem="pr2-u7-Q2n" firstAttribute="trailing" secondItem="y2X-Bl-NMo" secondAttribute="trailing" constant="80" id="y1p-9n-4hO"/>
                             <constraint firstItem="ceu-Eb-dPT" firstAttribute="top" secondItem="pr2-u7-Q2n" secondAttribute="top" constant="20" id="y5g-TL-3q3"/>
-                            <constraint firstItem="chF-GA-uZs" firstAttribute="top" secondItem="s8W-8t-VX9" secondAttribute="bottom" constant="55" id="yjH-bU-nTY"/>
-                            <constraint firstItem="s8W-8t-VX9" firstAttribute="centerY" secondItem="OmC-eV-SnZ" secondAttribute="centerY" constant="-20" id="ze0-Ef-r4X"/>
+                            <constraint firstItem="chF-GA-uZs" firstAttribute="top" secondItem="s8W-8t-VX9" secondAttribute="bottom" constant="40" id="yjH-bU-nTY"/>
+                            <constraint firstItem="s8W-8t-VX9" firstAttribute="centerY" secondItem="OmC-eV-SnZ" secondAttribute="centerY" constant="-50" id="ze0-Ef-r4X"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pr2-u7-Q2n"/>
                     </view>
@@ -200,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="44q-x7-znd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1883" y="609"/>
+            <point key="canvasLocation" x="1897" y="593"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="X8q-5I-4DR">
@@ -235,13 +235,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Your Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80i-Er-xeQ">
-                                <rect key="frame" x="16" y="410.5" width="382" height="35"/>
+                                <rect key="frame" x="16" y="380.5" width="382" height="35"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="29"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Full Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oIC-zk-7aE" customClass="RoundTextField" customModule="GetTodo" customModuleProvider="target">
-                                <rect key="frame" x="20" y="500.5" width="374" height="60"/>
+                                <rect key="frame" x="20" y="455.5" width="374" height="60"/>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.95294117649999999" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="EyL-BU-egm"/>
@@ -250,7 +250,7 @@
                                 <textInputTraits key="textInputTraits" textContentType="name"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email Adress" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CAE-go-i0d" customClass="RoundTextField" customModule="GetTodo" customModuleProvider="target">
-                                <rect key="frame" x="20" y="580.5" width="374" height="60"/>
+                                <rect key="frame" x="20" y="535.5" width="374" height="60"/>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.95294117649999999" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="671-q9-KJi"/>
@@ -259,7 +259,7 @@
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kd1-KP-JWd" customClass="RoundTextField" customModule="GetTodo" customModuleProvider="target">
-                                <rect key="frame" x="20" y="660.5" width="374" height="60"/>
+                                <rect key="frame" x="20" y="615.5" width="374" height="60"/>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.95294117649999999" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Haw-2x-05t"/>
@@ -279,7 +279,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BpH-Fv-5dc" customClass="RoundRectButton" customModule="GetTodo" customModuleProvider="target">
-                                <rect key="frame" x="20" y="750.5" width="374" height="60"/>
+                                <rect key="frame" x="20" y="705.5" width="374" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="xQs-jY-A21"/>
                                 </constraints>
@@ -300,7 +300,7 @@
                             <constraint firstItem="gxO-d6-eBf" firstAttribute="top" secondItem="0Td-oo-5fP" secondAttribute="bottom" constant="10" id="AF1-YU-QaL"/>
                             <constraint firstItem="CAE-go-i0d" firstAttribute="leading" secondItem="Ji0-sK-hyh" secondAttribute="leading" constant="20" id="Fj2-D4-JIs"/>
                             <constraint firstItem="Ji0-sK-hyh" firstAttribute="trailing" secondItem="80i-Er-xeQ" secondAttribute="trailing" constant="16" id="JGT-cx-D1y"/>
-                            <constraint firstItem="80i-Er-xeQ" firstAttribute="centerY" secondItem="C0f-Gs-bgq" secondAttribute="centerY" constant="-20" id="Jmk-SP-phe"/>
+                            <constraint firstItem="80i-Er-xeQ" firstAttribute="centerY" secondItem="C0f-Gs-bgq" secondAttribute="centerY" constant="-50" id="Jmk-SP-phe"/>
                             <constraint firstItem="Kd1-KP-JWd" firstAttribute="leading" secondItem="Ji0-sK-hyh" secondAttribute="leading" constant="20" id="SDI-pG-FJE"/>
                             <constraint firstItem="BpH-Fv-5dc" firstAttribute="top" secondItem="Kd1-KP-JWd" secondAttribute="bottom" constant="30" id="U4n-Sk-s5z"/>
                             <constraint firstItem="BpH-Fv-5dc" firstAttribute="leading" secondItem="Ji0-sK-hyh" secondAttribute="leading" constant="20" id="XFn-Wn-qFu"/>
@@ -312,7 +312,7 @@
                             <constraint firstItem="80i-Er-xeQ" firstAttribute="centerX" secondItem="C0f-Gs-bgq" secondAttribute="centerX" id="kUP-Fs-zKf"/>
                             <constraint firstItem="gxO-d6-eBf" firstAttribute="leading" secondItem="Ji0-sK-hyh" secondAttribute="leading" constant="80" id="mJl-Eg-VTg"/>
                             <constraint firstItem="Ji0-sK-hyh" firstAttribute="trailing" secondItem="Kd1-KP-JWd" secondAttribute="trailing" constant="20" id="puA-Wv-kQN"/>
-                            <constraint firstItem="oIC-zk-7aE" firstAttribute="top" secondItem="80i-Er-xeQ" secondAttribute="bottom" constant="55" id="rNB-iA-loH"/>
+                            <constraint firstItem="oIC-zk-7aE" firstAttribute="top" secondItem="80i-Er-xeQ" secondAttribute="bottom" constant="40" id="rNB-iA-loH"/>
                             <constraint firstItem="Ji0-sK-hyh" firstAttribute="trailing" secondItem="gxO-d6-eBf" secondAttribute="trailing" constant="80" id="zUh-8d-rxn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ji0-sK-hyh"/>

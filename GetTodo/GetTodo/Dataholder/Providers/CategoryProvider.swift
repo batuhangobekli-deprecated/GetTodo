@@ -104,7 +104,7 @@ extension CategoryProvider {
         workCategory.identifier = "2"
         workCategory.imageString = "briefcase.fill"
         workCategory.name = "Work"
-        workCategory.hexColorString = "#ffbe76"
+        workCategory.hexColorString = "#3f4996"
         CategoryProvider.create(with: workCategory)
 
         var musicCategory = CategoryItem()

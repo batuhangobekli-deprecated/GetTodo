@@ -18,6 +18,7 @@ class TaskProvider {
     static func tasks() -> [TaskItem] {
         return adapter.objects()?
             .filter("userId == %@", TempDataHolder.shared.currentUserId)
+            .sorted(byKeyPath: "date", ascending: false)
             .map({$0.toItem}) ?? []
     }
     
@@ -26,6 +27,7 @@ class TaskProvider {
         return adapter.objects(TaskModel.self)?
             .filter("categoryId == %@", categoryId)
             .filter("userId == %@", TempDataHolder.shared.currentUserId)
+            .sorted(byKeyPath: "date", ascending: false)
             .map({$0.toItem}) ?? []
     }
     
