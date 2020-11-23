@@ -106,6 +106,12 @@ extension AddTaskViewController {
         let toolbar = UIToolbar();
         toolbar.sizeToFit()
         
+        //Check for ios 13.4 or higher
+        if #available(iOS 13.4, *) {
+            datePicker.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 250.0)
+            datePicker.preferredDatePickerStyle = .wheels
+        }
+        
         //done button & cancel button
         let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(donedatePicker))
         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
