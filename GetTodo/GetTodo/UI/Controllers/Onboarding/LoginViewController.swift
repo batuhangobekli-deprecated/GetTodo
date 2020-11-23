@@ -23,14 +23,31 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func loginButtonDidTap(_ sender: Any) {
-        let loginResultTuple = UserProvider.login(email: emailAdressTextField.text ?? "",password: passwordTextfield.text ?? "")
-        
-        if !loginResultTuple.isSuccess{
-            CommonUtility.shared.prepareBasicAlert(message:"Please check your email and password" , title: "Error", buttonTitle: "OK", viewController: self)
-        }else{
-            TempDataHolder.shared.currentUserId = loginResultTuple.currentUserId
-            CommonUtility.shared.navigateToHomePage(navigationController: self.navigationController)
-        }
+        self.login()
     }
 }
 
+
+extension LoginViewController {
+    func login(){
+        let emailAdress = emailAdressTextField.text ?? ""
+        let password = passwordTextfield.text ?? ""
+        
+        if CommonUtility.shared.isValidEmail(emailAdress){
+            if !password.isEmpty {
+                let loginResultTuple = UserProvider.login(email: emailAdress,password: password)
+                
+                if !loginResultTuple.isSuccess{
+                    CommonUtility.shared.prepareBasicAlert(message:"Please check your email and password" , title: "Error", buttonTitle: "OK", viewController: self)
+                }else{
+                    TempDataHolder.shared.currentUserId = loginResultTuple.currentUserId
+                    CommonUtility.shared.navigateToHomePage(navigationController: self.navigationController)
+                }
+            }else{
+                CommonUtility.shared.prepareBasicAlert(message:"Please enter password" , title: "Error", buttonTitle: "OK", viewController: self)
+            }
+        }else{
+            CommonUtility.shared.prepareBasicAlert(message:"Please enter a valid email" , title: "Error", buttonTitle: "OK", viewController: self)
+        }
+    }
+}

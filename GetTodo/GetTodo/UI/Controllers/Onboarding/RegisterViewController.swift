@@ -25,13 +25,31 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func registerButtonDidTap(_ sender: Any) {
-        let registerResultTuple = UserProvider.register(email: self.emailAdressTextField.text ?? "", password: self.passwordTextfield.text ?? "", fullName: fullNameTextField.text ?? "")
+        self.register()
+    }
+}
+
+extension RegisterViewController{
+    func register(){
+        let emailAdress = emailAdressTextField.text ?? ""
+        let password = passwordTextfield.text ?? ""
+        let fullName = fullNameTextField.text ?? ""
         
-        if !(registerResultTuple.isSuccess){
-            CommonUtility.shared.prepareBasicAlert(message:"Email is already in use.Please enter another email",title:"Error",buttonTitle:"OK", viewController: self)
+        if CommonUtility.shared.isValidEmail(emailAdress){
+            if !password.isEmpty && !fullName.isEmpty {
+                let registerResultTuple = UserProvider.register(email: self.emailAdressTextField.text ?? "", password: self.passwordTextfield.text ?? "", fullName: fullNameTextField.text ?? "")
+                
+                if !(registerResultTuple.isSuccess){
+                    CommonUtility.shared.prepareBasicAlert(message:"Email is already in use.Please enter another email",title:"Error",buttonTitle:"OK", viewController: self)
+                }else{
+                    TempDataHolder.shared.currentUserId = registerResultTuple.currentUserId
+                    CommonUtility.shared.navigateToHomePage(navigationController: self.navigationController)
+                }
+            }else{
+                CommonUtility.shared.prepareBasicAlert(message:"Please fill all the fields",title:"Error",buttonTitle:"OK", viewController: self)
+            }
         }else{
-            TempDataHolder.shared.currentUserId = registerResultTuple.currentUserId
-            CommonUtility.shared.navigateToHomePage(navigationController: self.navigationController)
+            CommonUtility.shared.prepareBasicAlert(message:"Please enter a valid email" , title: "Error", buttonTitle: "OK", viewController: self)
         }
     }
 }
