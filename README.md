@@ -6,3 +6,10 @@ Cocoapods 1.10.0
 
 To run application:
 iOS 13.0 or higher simulator/iphone
+
+## Features
+
+- [x] Multi User Support
+- [x] Add/Edit/Delete Tasks
+- [x] Categories / Dates
+- [x] Login/Register
