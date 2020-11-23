@@ -10,6 +10,14 @@ iOS 13.0 or higher simulator/iphone
 ## Features
 
 - [x] Multi User Support
-- [x] Add/Edit/Delete Tasks
+- [x] Add / Edit / Delete Tasks
 - [x] Categories / Dates
 - [x] Login/Register
+
+## Third Party Dependencies
+
+- [x] CocaPods
+- [x] IQKeyboard
+- [x] RealmSwift
+
+https://www.linkpicture.com/q/IMG_1271.jpg
