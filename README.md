@@ -1,6 +1,6 @@
 # GetTodo
 
-Todo application written with Swift.
+Todo application written with Swift
 
 Logos made with https://www.photopea.com/
 
